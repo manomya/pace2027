@@ -1,0 +1,80 @@
+<div class="page-head"><div class="wrap">
+  <div class="eyebrow-l">For Authors</div>
+  <h1>Call for Papers</h1>
+</div></div>
+
+<section><div class="wrap">
+  <h3>Author Guidelines</h3>
+  <ul class="bul">
+    <li>All papers should strictly be prepared as per the author guidelines standard format.</li>
+    <li>The manuscript (maximum 10 pages) should be thoroughly checked for grammatical or typographical errors before submission.</li>
+    <li>Authors should ensure that the similarity score of their research paper is not above 10%.</li>
+    <li>All manuscripts should be submitted in the template format shared through mail.</li>
+    <li>Best paper and best presentation from each track will receive a winning prize and a certificate of excellence.</li>
+  </ul>
+
+  <h3 style="margin-top:34px">Publication</h3>
+  <ul class="bul">
+    <li>All accepted and presented papers are proposed to be published in the Conference Proceedings with an ISBN.</li>
+    <li>A soft copy of the proceedings will be provided to the corresponding author.</li>
+    <li>Selected papers are proposed to be recommended for publication in Scopus and/or Web of Science indexed journals, subject to the respective journal's peer-review process and publication policies. Applicable Article Processing Charges (APCs), if any, shall be borne by the authors.</li>
+  </ul>
+
+  <h3 style="margin-top:34px">Important Dates</h3>
+  <%- include('../partials/dates') %>
+
+  <div style="margin-top:32px;display:flex;gap:16px;flex-wrap:wrap">
+    <a class="btn btn-gold" href="/registration">Proceed to Registration</a>
+    <a class="btn btn-ghost" style="color:var(--maroon);border-color:var(--maroon)" href="#submit-intent">Submit Paper Intent</a>
+  </div>
+
+  <div id="submit-intent" style="margin-top:48px;padding:32px;background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold)">
+    <div class="eyebrow">Online Submission</div>
+    <h2>Submit Your Paper Details / Abstract Intent</h2>
+    <p class="lead">Fill out the form below to register your paper submission intent with the conference secretariat. You will receive the submission template and guidelines via email.</p>
+    
+    <div id="reg-form-response" class="form-alert"></div>
+
+    <form id="reg-interest-form">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="reg-name">Corresponding Author Name *</label>
+          <input type="text" id="reg-name" name="name" required placeholder="e.g. Dr. Rajesh Sharma">
+        </div>
+        <div class="form-group">
+          <label for="reg-email">Author Email *</label>
+          <input type="email" id="reg-email" name="email" required placeholder="e.g. rajesh@university.edu">
+        </div>
+        <div class="form-group">
+          <label for="reg-phone">Contact Phone / WhatsApp</label>
+          <input type="tel" id="reg-phone" name="phone" placeholder="e.g. +91 9876543210">
+        </div>
+        <div class="form-group">
+          <label for="reg-affil">Institution / University *</label>
+          <input type="text" id="reg-affil" name="institution" required placeholder="e.g. IIT Delhi / NIT Jaipur">
+        </div>
+        <div class="form-group full">
+          <label for="reg-track">Select Conference Track *</label>
+          <select id="reg-track" name="track" required>
+            <option value="">-- Choose a Track --</option>
+            <% themes.forEach(function(t) { %>
+              <option value="<%= t.track %>: <%= t.title %>"><%= t.track %>: <%= t.title %></option>
+            <% }); %>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label for="reg-title">Proposed Paper Title *</label>
+          <input type="text" id="reg-title" name="paperTitle" required placeholder="Title of your research paper">
+        </div>
+        <div class="form-group full">
+          <label for="reg-abstract">Brief Abstract / Summary (Optional)</label>
+          <textarea id="reg-abstract" name="abstract" rows="4" placeholder="Brief outline or key objectives (up to 300 words)"></textarea>
+        </div>
+        <div class="form-group full">
+          <button type="submit" class="btn btn-gold" style="cursor:pointer;border:none">Submit Paper Intent</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div></section>

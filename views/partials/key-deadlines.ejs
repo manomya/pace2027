@@ -1,0 +1,334 @@
+<style>
+.deadlines {
+  --ivory: #fbf3e3;
+  --burgundy: #651a29;
+  --burgundy-dark: #4b111d;
+  --gold: #c49a2c;
+  --gold-light: #dfc27b;
+  --ink: #4b3b34;
+  --muted: #85766a;
+  --line: rgba(196, 154, 44, .42);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 100vh;
+  background: var(--ivory);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  padding: 70px clamp(24px, 5vw, 86px) 76px;
+  box-sizing: border-box;
+}
+.deadlines * {
+  box-sizing: border-box;
+}
+.deadlines:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  opacity: .34;
+  background-image: linear-gradient(rgba(196, 154, 44, .12) 1px, transparent 1px), linear-gradient(90deg, rgba(196, 154, 44, .12) 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: linear-gradient(90deg, #000, transparent 80%);
+  -webkit-mask-image: linear-gradient(90deg, #000, transparent 80%);
+}
+.deadlines:after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: clamp(170px, 16vw, 260px);
+  background: var(--burgundy);
+}
+.deadlines .blueprint {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: clamp(170px, 16vw, 260px);
+  opacity: 1;
+  pointer-events: none;
+  background-image: url("/images/blueprint-pillar.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.deadlines .blueprint svg {
+  display: none;
+}
+.deadlines .deadlines-inner {
+  max-width: 1450px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(110px, 22%) minmax(0, 1fr);
+  gap: clamp(30px, 4vw, 70px);
+  position: relative;
+}
+.deadlines .deadlines-content {
+  grid-column: 2;
+  min-width: 0;
+}
+.deadlines .ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  margin: 0 auto 26px;
+  max-width: 560px;
+  color: var(--gold);
+}
+.deadlines .ornament:before,
+.deadlines .ornament:after {
+  content: "";
+  height: 1px;
+  background: var(--line);
+  flex: 1;
+}
+.deadlines .ornament span {
+  font-size: 14px;
+  letter-spacing: 7px;
+}
+.deadlines .eyebrow {
+  margin: 0 0 8px;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .34em;
+  text-transform: uppercase;
+  font-family: 'DM Sans', sans-serif;
+}
+.deadlines .eyebrow::before {
+  content: none !important;
+}
+.deadlines h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(48px, 5.8vw, 86px);
+  font-weight: 600;
+  line-height: .91;
+  letter-spacing: -.035em;
+  margin: 0;
+  color: var(--burgundy);
+}
+.deadlines h1 em {
+  font-style: normal;
+  color: var(--gold);
+}
+.deadlines .intro {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(17px, 1.35vw, 21px);
+  line-height: 1.35;
+  max-width: 720px;
+  color: #76695f;
+  margin: 16px 0 28px;
+}
+.deadlines .timeline {
+  position: relative;
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+}
+.deadlines .timeline:before {
+  content: "";
+  position: absolute;
+  left: 21px;
+  top: 25px;
+  bottom: 25px;
+  width: 1px;
+  background: var(--gold-light);
+}
+.deadlines .deadline {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) minmax(150px, 225px);
+  align-items: center;
+  gap: 18px;
+  min-height: 72px;
+  padding: 9px 0;
+  border-top: 1px solid var(--line);
+  position: relative;
+  transition: transform .25s ease, background .25s ease;
+}
+.deadlines .deadline:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.deadlines .deadline:hover {
+  transform: translateX(5px);
+  background: rgba(255, 255, 255, .28);
+}
+.deadlines .date-icon {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--burgundy);
+  border: 1px solid var(--gold);
+  color: var(--gold-light);
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 0 5px var(--ivory);
+}
+.deadlines .date-icon svg {
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.deadlines .deadline-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(20px, 1.7vw, 27px);
+  font-weight: 700;
+  color: var(--burgundy);
+  line-height: 1.05;
+}
+.deadlines .deadline-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.deadlines .date {
+  justify-self: stretch;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px 20px 8px 28px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, .2);
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: clamp(19px, 1.65vw, 25px);
+  color: var(--burgundy);
+  position: relative;
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+}
+.deadlines .date:after {
+  content: "";
+  width: 28px;
+  height: 2px;
+  background: var(--gold);
+  margin-top: 7px;
+}
+.deadlines .deadline:last-child .date {
+  color: #a8790b;
+}
+.deadlines .cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 24px;
+  background: var(--gold);
+  color: var(--burgundy-dark);
+  font-size: 13px;
+  letter-spacing: .06em;
+  text-decoration: none;
+  border: 1px solid var(--gold);
+  transition: background .2s, transform .2s;
+  font-family: 'DM Sans', sans-serif;
+}
+.deadlines .cta:hover {
+  background: #d8b54f;
+  transform: translateY(-2px);
+}
+.deadlines .cta span {
+  font-size: 19px;
+}
+@media (max-width: 900px) {
+  .deadlines { padding: 48px 24px 56px; }
+  .deadlines:after, .deadlines .blueprint { width: clamp(76px, 12vw, 120px); }
+  .deadlines .deadlines-inner { grid-template-columns: 55px minmax(0, 1fr); gap: 20px; }
+  .deadlines .deadline { grid-template-columns: 43px minmax(0, 1fr); gap: 14px; padding: 14px 0; }
+  .deadlines .date { grid-column: 2; min-height: auto; padding: 8px 12px; clip-path: none; font-size: 20px; }
+  .deadlines .date:after { margin-top: 4px; }
+  .deadlines .deadline-title { font-size: 23px; }
+  .deadlines .deadline-desc { font-size: 16px; }
+  .deadlines .intro { margin-bottom: 24px; }
+}
+@media (max-width: 520px) {
+  .deadlines { padding: 38px 17px 44px; }
+  .deadlines:after, .deadlines .blueprint { width: 22px; }
+  .deadlines .deadlines-inner { display: block; }
+  .deadlines .deadlines-content { padding-left: 12px; }
+  .deadlines .ornament { margin-bottom: 22px; }
+  .deadlines .ornament span { letter-spacing: 4px; }
+  .deadlines h1 { font-size: 49px; }
+  .deadlines .intro { font-size: 18px; }
+  .deadlines .timeline:before { left: 17px; }
+  .deadlines .deadline { grid-template-columns: 36px minmax(0, 1fr); gap: 11px; min-height: 0; padding: 13px 0; }
+  .deadlines .date-icon { width: 35px; height: 35px; }
+  .deadlines .date-icon svg { width: 18px; height: 18px; }
+  .deadlines .deadline-title { font-size: 21px; }
+  .deadlines .deadline-desc { font-size: 15px; }
+  .deadlines .date { font-size: 19px; }
+  .deadlines .cta { padding: 14px 17px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .deadlines, .deadlines:before, .deadlines:after, .deadlines * { scroll-behavior: auto !important; transition: none !important; }
+}
+</style>
+
+<section class="deadlines" aria-labelledby="deadlines-title">
+  <div class="blueprint" aria-hidden="true">
+    <svg viewBox="0 0 250 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="#d9b45d" stroke-width=".8" opacity=".8">
+        <path d="M0 245H250M0 390H250M0 535H250M0 680H250M30 0V900M80 0V900M130 0V900M180 0V900M230 0V900" opacity=".25"/>
+        <path d="M-40 340H270M-40 350H270M-40 360H270"/>
+        <path d="M25 340V650H95V340M25 650H95M25 370H95M25 400H95M25 430H95M25 460H95M25 490H95M25 520H95M25 550H95M25 580H95M25 610H95"/>
+        <path d="M50 340L50 250L64 250L64 340M43 250H71M43 270H71M43 290H71M43 310H71"/>
+        <path d="M-10 340L45 315L100 340L155 315L210 340L265 315M-10 350L45 325L100 350L155 325L210 350L265 325"/>
+        <path d="M100 340V610M155 340V610M210 340V610M90 610H220M95 620H215"/>
+        <path d="M100 365L155 340M100 390L210 340M155 390L210 365M100 415L155 390M155 440L210 415M100 465L155 440M155 490L210 465M100 515L155 490M155 540L210 515"/>
+        <path d="M0 700H250M0 720H250M0 740H250M0 760H250M0 780H250M0 800H250" opacity=".45"/>
+        <circle cx="155" cy="340" r="5"/><circle cx="100" cy="340" r="5"/><circle cx="210" cy="340" r="5"/>
+      </g>
+      <g fill="#d9b45d" opacity=".8"><circle cx="50" cy="250" r="2.5"/><circle cx="155" cy="390" r="2.5"/><circle cx="100" cy="465" r="2.5"/></g>
+    </svg>
+  </div>
+  <div class="deadlines-inner">
+    <main class="deadlines-content">
+      <div class="ornament" aria-hidden="true"><span>◆ ◆ ◆</span></div>
+      <p class="eyebrow">Important Dates</p>
+      <h1 id="deadlines-title">Key <em>Deadlines</em></h1>
+      <p class="intro">Mark your calendar for important submission, registration and conference dates. Stay updated and be a part of PACE-2027.</p>
+      <ol class="timeline">
+        <li class="deadline">
+          <span class="date-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v5h4M9 12h7M9 16h7"/></svg></span>
+          <div><div class="deadline-title">Last Date of Abstract</div><div class="deadline-desc">Submit your abstract for initial review.</div></div>
+          <time class="date" datetime="2026-09-15">Sep. 15, 2026</time>
+        </li>
+        <li class="deadline">
+          <span class="date-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h11M4 8h8M4 12h7M4 16h5"/><path d="m14 17 5-5 2 2-5 5-3 1z"/></svg></span>
+          <div><div class="deadline-title">Last Date of Paper Submission</div><div class="deadline-desc">Submit your full paper for peer review.</div></div>
+          <time class="date" datetime="2026-10-15">Oct. 15, 2026</time>
+        </li>
+        <li class="deadline">
+          <span class="date-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg></span>
+          <div><div class="deadline-title">Acceptance Notification</div><div class="deadline-desc">Notification of paper acceptance.</div></div>
+          <time class="date" datetime="2026-11-15">Nov. 15, 2026</time>
+        </li>
+        <li class="deadline">
+          <span class="date-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 19v-2a6 6 0 0 1 12 0v2zM15 15a4 4 0 0 1 6 3v1h-4"/></svg></span>
+          <div><div class="deadline-title">Last Date of Registration</div><div class="deadline-desc">Complete your registration to confirm participation.</div></div>
+          <time class="date" datetime="2026-12-15">Dec. 15, 2026</time>
+        </li>
+        <li class="deadline">
+          <span class="date-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="1"/><circle cx="12" cy="13" r="4"/><path d="M7 6l2-3h6l2 3"/></svg></span>
+          <div><div class="deadline-title">Camera Ready Paper Submission</div><div class="deadline-desc">Submit the final camera-ready version.</div></div>
+          <time class="date" datetime="2026-12-28">Dec. 28, 2026</time>
+        </li>
+        <li class="deadline">
+          <span class="date-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M7 3v4M17 3v4M3 10h18M7 14h2M12 14h2M17 14h.1M7 18h2M12 18h2"/></svg></span>
+          <div><div class="deadline-title">Conference Dates</div><div class="deadline-desc">Join us at Poornima University, Jaipur.</div></div>
+          <time class="date" datetime="2027-01-29">Jan. 29 – 30, 2027</time>
+        </li>
+      </ol>
+      <a class="cta" href="/registration">Registration &amp; Fees <span aria-hidden="true">→</span></a>
+    </main>
+  </div>
+</section>

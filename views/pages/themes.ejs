@@ -1,0 +1,1054 @@
+<%# ======================================================================
+    PACE-2027 | CONFERENCE THEMES — CIVIL ENGINEERING ATLAS
+    Editorial-style architectural research experience with bespoke
+    SVG engineering illustrations, two-column bridge hero, and
+    responsive 3-column technical track atlas.
+    ====================================================================== %>
+
+<%# ── REFINED TWO-COLUMN HERO ────────────────────────────────────────── %>
+<header class="atlas-hero" id="atlas-hero" aria-label="Conference Themes Hero">
+  <!-- Architectural blueprint grid lines -->
+  <div class="atlas-grid-lines" aria-hidden="true"></div>
+
+  <div class="atlas-hero-container">
+    <div class="atlas-hero-grid">
+
+      <!-- LEFT COLUMN: Editorial Typography & Scope -->
+      <div class="atlas-hero-left">
+        <div class="atlas-eyebrow" role="doc-subtitle">
+          <span class="atlas-eyebrow-rule" aria-hidden="true"></span>
+          <span>CONFERENCE THEMES</span>
+          <span class="atlas-eyebrow-rule" aria-hidden="true"></span>
+        </div>
+
+        <h1 class="atlas-hero-heading">
+          Six Technical<br>
+          <span class="atlas-hero-tracks-highlight">Tracks</span>
+        </h1>
+
+        <p class="atlas-hero-intro">
+          The conference welcomes high-quality original research across civil
+          engineering and allied disciplines. The listed tracks are indicative and
+          not exhaustive; innovative and interdisciplinary research is also
+          encouraged.
+        </p>
+
+        <!-- Delicate Gold Ornamental Divider -->
+        <div class="atlas-hero-divider" aria-hidden="true">
+          <span class="atlas-divider-line"></span>
+          <span class="atlas-divider-ornament">✦</span>
+          <span class="atlas-divider-line"></span>
+        </div>
+
+        <!-- Six Small Numbered Indicators with Refined Borders (No bulky progress bar) -->
+        <div class="atlas-track-nav" aria-label="Jump to technical track">
+          <span class="atlas-track-nav-label">JUMP TO TRACK</span>
+          <nav class="atlas-track-nav-pills">
+            <% themes.forEach(function(t, i) { %>
+              <a href="#track-panel-<%= i+1 %>" class="atlas-nav-pill" title="Jump to Track <%= i+1 %>: <%= t.title %>">
+                <span><%= String(i+1).padStart(2,'0') %></span>
+              </a>
+            <% }); %>
+          </nav>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: Civil Engineering Bridge Elevation Illustration Plate -->
+      <div class="atlas-hero-right" aria-hidden="true">
+        <div class="atlas-bridge-plate">
+          <div class="atlas-plate-meta">
+            <span class="atlas-plate-tag">FIG. 01 — CABLE-STAYED VIADUCT ELEVATION</span>
+            <span class="atlas-plate-scale">SCALE 1:2500 · CIVIL ENGR. ATLAS</span>
+          </div>
+
+          <div class="atlas-bridge-visual">
+            <!-- Photographic elevation underlay blended into ivory background -->
+            <img
+              src="/images/themes-bridge-hero.jpg"
+              alt="Cable-stayed bridge elevation engineering drawing"
+              class="atlas-bridge-photo"
+              loading="eager"
+              decoding="async"
+            >
+
+            <!-- Precision Architectural Drafting & Annotation Overlay -->
+            <svg class="atlas-bridge-svg" viewBox="0 0 800 360" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <defs>
+                <pattern id="hero-fine-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+                  <line x1="0" y1="0" x2="24" y2="0" stroke="#C49A2C" stroke-width="0.35" opacity="0.22"/>
+                  <line x1="0" y1="0" x2="0" y2="24" stroke="#C49A2C" stroke-width="0.35" opacity="0.22"/>
+                </pattern>
+              </defs>
+              <!-- Grid background -->
+              <rect width="800" height="360" fill="url(#hero-fine-grid)"/>
+
+              <!-- Water level datum line -->
+              <line x1="30" y1="290" x2="770" y2="290" stroke="#651A29" stroke-width="1.2" opacity="0.6"/>
+              <text x="40" y="284" font-family="'Marcellus', serif" font-size="8.5" fill="#651A29" letter-spacing="1.2">▼ WATER LEVEL EL. +14.20M</text>
+
+              <!-- Deck elevation baseline -->
+              <line x1="30" y1="210" x2="770" y2="210" stroke="#C49A2C" stroke-width="1.2" stroke-dasharray="6 4" opacity="0.8"/>
+              <text x="640" y="204" font-family="'Marcellus', serif" font-size="8.5" fill="#C49A2C" letter-spacing="1.2">DECK LEVEL EL. +38.50M</text>
+
+              <!-- Main Pylon 01 (x=280) -->
+              <line x1="280" y1="65" x2="280" y2="315" stroke="#651A29" stroke-width="1.8" opacity="0.85"/>
+              <text x="280" y="55" text-anchor="middle" font-family="'Marcellus', serif" font-size="8.5" fill="#651A29" letter-spacing="1">PYLON 01 (H=165M)</text>
+
+              <!-- Main Pylon 02 (x=520) -->
+              <line x1="520" y1="65" x2="520" y2="315" stroke="#651A29" stroke-width="1.8" opacity="0.85"/>
+              <text x="520" y="55" text-anchor="middle" font-family="'Marcellus', serif" font-size="8.5" fill="#651A29" letter-spacing="1">PYLON 02 (H=165M)</text>
+
+              <!-- Stay Cables Pylon 01 -->
+              <line class="hero-cable" x1="280" y1="85" x2="120" y2="210" stroke="#C49A2C" stroke-width="0.9" opacity="0.75"/>
+              <line class="hero-cable" x1="280" y1="105" x2="160" y2="210" stroke="#C49A2C" stroke-width="0.9" opacity="0.75"/>
+              <line class="hero-cable" x1="280" y1="125" x2="200" y2="210" stroke="#C49A2C" stroke-width="0.9" opacity="0.75"/>
+              <line class="hero-cable" x1="280" y1="145" x2="240" y2="210" stroke="#C49A2C" stroke-width="0.9" opacity="0.75"/>
+              <line class="hero-cable" x1="280" y1="85" x2="440" y2="210" stroke="#C49A2C" stroke-width="0.9" opacity="0.75"/>
+              <line class="hero-cable" x1="280" y1="105" x2="400" y2="210" stroke="#C49A2C" stroke-width="0.9" opacity="0.75"/>
+              <line class="hero-cable" x1="280" y1="125" x2="360" y2="210" stroke="#C49A2C" stroke-width="0.9" opacity="0.75"/>
+              <line class="hero-cable" x1="280" y1="145" x2="320" y2="210" stroke="#C49A2C" stroke-width="0.9" opacity="0.75"/>
+
+              <!-- Stay Cables Pylon 02 -->
+              <line class="hero-cable" x1="520" y1="85" x2="360" y2="210" stroke="#C49A2C" stroke-width="0.9" opacity="0.75"/>
+              <line class="hero-cable" x1="520" y1="105" x2="400" y2="210" stroke="#C49A2C" stroke-width="0.9" opacity="0.75"/>
+              <line class="hero-cable" x1="520" y1="125" x2="440" y2="210" stroke="#C49A2C" stroke-width="0.9" opacity="0.75"/>
+              <line class="hero-cable" x1="520" y1="145" x2="480" y2="210" stroke="#C49A2C" stroke-width="0.9" opacity="0.75"/>
+              <line class="hero-cable" x1="520" y1="85" x2="680" y2="210" stroke="#C49A2C" stroke-width="0.9" opacity="0.75"/>
+              <line class="hero-cable" x1="520" y1="105" x2="640" y2="210" stroke="#C49A2C" stroke-width="0.9" opacity="0.75"/>
+              <line class="hero-cable" x1="520" y1="125" x2="600" y2="210" stroke="#C49A2C" stroke-width="0.9" opacity="0.75"/>
+              <line class="hero-cable" x1="520" y1="145" x2="560" y2="210" stroke="#C49A2C" stroke-width="0.9" opacity="0.75"/>
+
+              <!-- Span Dimension Ticks & Stationing -->
+              <line x1="120" y1="330" x2="680" y2="330" stroke="#651A29" stroke-width="0.8" opacity="0.55"/>
+              <line x1="120" y1="324" x2="120" y2="336" stroke="#651A29" stroke-width="1.2"/>
+              <line x1="280" y1="324" x2="280" y2="336" stroke="#651A29" stroke-width="1.2"/>
+              <line x1="520" y1="324" x2="520" y2="336" stroke="#651A29" stroke-width="1.2"/>
+              <line x1="680" y1="324" x2="680" y2="336" stroke="#651A29" stroke-width="1.2"/>
+              <text x="200" y="344" text-anchor="middle" font-family="'Marcellus', serif" font-size="8" fill="#651A29">SPAN: 240M</text>
+              <text x="400" y="344" text-anchor="middle" font-family="'Marcellus', serif" font-size="8" fill="#651A29">MAIN NAVIGATION SPAN: 480M</text>
+              <text x="600" y="344" text-anchor="middle" font-family="'Marcellus', serif" font-size="8" fill="#651A29">SPAN: 240M</text>
+
+              <!-- North Indicator Compass Rosette -->
+              <g transform="translate(740, 48)">
+                <circle cx="0" cy="0" r="14" fill="none" stroke="#C49A2C" stroke-width="0.75"/>
+                <line x1="0" y1="12" x2="0" y2="-12" stroke="#651A29" stroke-width="1.2"/>
+                <polygon points="0,-12 3.5,-5 -3.5,-5" fill="#651A29"/>
+                <text x="0" y="-15" text-anchor="middle" font-family="'Marcellus', serif" font-size="7.5" fill="#651A29">N</text>
+              </g>
+            </svg>
+          </div>
+
+          <div class="atlas-plate-footer">
+            <span>LONGITUDINAL ELEVATION</span>
+            <span>CIVIL ENGINEERING ATLAS · PACE 2027</span>
+            <span>JAIPUR, RAJASTHAN</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+
+<%# ── SIX TECHNICAL TRACKS SECTION ───────────────────────────────────── %>
+<section class="atlas-tracks-section" id="atlas-tracks" aria-labelledby="atlas-tracks-heading">
+  <div class="atlas-tracks-wrap">
+
+    <h2 id="atlas-tracks-heading" class="visually-hidden">Conference Technical Tracks</h2>
+
+    <!-- 3-Column Editorial Atlas Grid -->
+    <div class="atlas-grid" id="atlas-grid">
+
+      <%
+        // Coordinated dignified accent palette for each track
+        var trackMeta = [
+          {
+            accent:   '#651A29', // Track 01: Primary Burgundy (Structural)
+            accentLt: 'rgba(101,26,41,0.10)',
+            label:    'Structural Engineering & Smart Infrastructure',
+            icon:     '🏗',
+            illoId:   'illo-structural'
+          },
+          {
+            accent:   '#1B4965', // Track 02: Hydraulic Slate Blue (Water)
+            accentLt: 'rgba(27,73,101,0.10)',
+            label:    'Water Resources & Hydraulic Systems',
+            icon:     '🌊',
+            illoId:   'illo-water'
+          },
+          {
+            accent:   '#285838', // Track 03: Viridian Green (Environmental)
+            accentLt: 'rgba(40,88,56,0.10)',
+            label:    'Environmental Engineering & Circular Economy',
+            icon:     '♻',
+            illoId:   'illo-environmental'
+          },
+          {
+            accent:   '#845318', // Track 04: Earth Ochre (Geotechnical)
+            accentLt: 'rgba(132,83,24,0.10)',
+            label:    'Geotechnical Engineering & Ground Improvement',
+            icon:     '⛏',
+            illoId:   'illo-geotechnical'
+          },
+          {
+            accent:   '#4B2B69', // Track 05: Imperial Amethyst (AI & Computational)
+            accentLt: 'rgba(75,43,105,0.10)',
+            label:    'Artificial Intelligence & Computational Civil Engineering',
+            icon:     '🤖',
+            illoId:   'illo-ai'
+          },
+          {
+            accent:   '#853625', // Track 06: Terracotta / Transportation Sienna (Mobility)
+            accentLt: 'rgba(133,54,37,0.10)',
+            label:    'Transportation Engineering & Urban Mobility',
+            icon:     '🛣',
+            illoId:   'illo-transport'
+          }
+        ];
+      %>
+
+      <% themes.forEach(function(t, idx) {
+        var meta = trackMeta[idx];
+        var trackNum = String(idx + 1).padStart(2, '0');
+      %>
+      <article
+        class="atlas-panel"
+        id="track-panel-<%= idx+1 %>"
+        data-track="<%= idx+1 %>"
+        style="--track-accent: <%= meta.accent %>; --track-accent-lt: <%= meta.accentLt %>;"
+        aria-labelledby="track-title-<%= idx+1 %>"
+        tabindex="0"
+      >
+        <!-- Fine top-border drawn as SVG drafting rule -->
+        <div class="atlas-panel-topbar" aria-hidden="true">
+          <svg class="atlas-topbar-svg" viewBox="0 0 400 6" preserveAspectRatio="none">
+            <line x1="0" y1="3" x2="400" y2="3" stroke="var(--track-accent)" stroke-width="2.5"/>
+            <line x1="0" y1="5.5" x2="400" y2="5.5" stroke="#C49A2C" stroke-width="0.75" stroke-dasharray="4 4"/>
+          </svg>
+        </div>
+
+        <!-- Watermark Track Numeral in background -->
+        <div class="atlas-panel-watermark" aria-hidden="true"><%= trackNum %></div>
+
+        <!-- Panel Header: Track Number + Technical Icon -->
+        <header class="atlas-panel-head">
+          <div class="atlas-panel-num-badge">
+            <span class="atlas-track-label-prefix">TRACK</span>
+            <span class="atlas-track-num-digit"><%= trackNum %></span>
+          </div>
+          <div class="atlas-panel-icon" aria-label="<%= meta.label %>"><%= meta.icon %></div>
+        </header>
+
+        <!-- Bespoke SVG Engineering Drafting Illustration -->
+        <div class="atlas-illo-wrap" aria-hidden="true">
+          <%- include('../partials/track-illo', { illoId: meta.illoId, accent: meta.accent }) %>
+        </div>
+
+        <!-- Complete Track Title -->
+        <h3 class="atlas-panel-title" id="track-title-<%= idx+1 %>">
+          <%= t.title %>
+        </h3>
+
+        <!-- All Three Research Topic Bullets -->
+        <ul class="atlas-topic-list" aria-label="Research Topics">
+          <% t.topics.forEach(function(topic) { %>
+            <li class="atlas-topic-item">
+              <span class="atlas-topic-bullet" aria-hidden="true">
+                <svg viewBox="0 0 12 12" width="10" height="10">
+                  <polygon points="6,0 12,6 6,12 0,6" fill="var(--track-accent)" opacity="0.9"/>
+                </svg>
+              </span>
+              <span class="atlas-topic-text"><%= topic %></span>
+            </li>
+          <% }); %>
+        </ul>
+
+        <!-- Panel Footer: Directional Arrow & Track Identifier -->
+        <div class="atlas-panel-footer" aria-hidden="true">
+          <div class="atlas-footer-rule"></div>
+          <div class="atlas-arrow-wrap">
+            <span class="atlas-arrow-label">Track <%= trackNum %> · Research Scope</span>
+            <svg class="atlas-arrow-svg" viewBox="0 0 32 16" fill="none">
+              <line x1="0" y1="8" x2="26" y2="8" stroke="#C49A2C" stroke-width="1.2"/>
+              <polyline points="20,2 28,8 20,14" stroke="#C49A2C" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Fine Architectural Corner Accents -->
+        <div class="atlas-corner atlas-corner-tl" aria-hidden="true"></div>
+        <div class="atlas-corner atlas-corner-tr" aria-hidden="true"></div>
+        <div class="atlas-corner atlas-corner-bl" aria-hidden="true"></div>
+        <div class="atlas-corner atlas-corner-br" aria-hidden="true"></div>
+      </article>
+      <% }); %>
+
+    </div><!-- end #atlas-grid -->
+
+    <!-- Section Footer: Indicative Statement & Submission CTA -->
+    <footer class="atlas-tracks-footer">
+      <div class="atlas-footer-ornament" aria-hidden="true">
+        <svg viewBox="0 0 320 20" class="atlas-footer-rule-svg">
+          <line x1="0" y1="10" x2="140" y2="10" stroke="#C49A2C" stroke-width="0.8" stroke-dasharray="3 5"/>
+          <text x="160" y="14" text-anchor="middle" font-family="'Marcellus', serif" font-size="12" fill="#C49A2C" letter-spacing="3">✦</text>
+          <line x1="180" y1="10" x2="320" y2="10" stroke="#C49A2C" stroke-width="0.8" stroke-dasharray="3 5"/>
+        </svg>
+      </div>
+
+      <p class="atlas-disclaimer">
+        The tracks listed above are indicative and not exhaustive. High-quality original and interdisciplinary research spanning civil engineering and allied disciplines is warmly welcomed.
+      </p>
+
+      <a class="btn btn-gold atlas-cta" href="/papers" aria-label="View author guidelines for paper submission">
+        Author Guidelines &amp; Submission
+      </a>
+    </footer>
+
+  </div>
+</section>
+
+
+<%# ── ATLAS PAGE STYLES ─────────────────────────────────────────────── %>
+<style id="atlas-themes-styles">
+/* ================================================================
+   CIVIL ENGINEERING ATLAS — THEMES PAGE STYLES
+   Color Palette:
+     Warm Ivory:     #FAF3E4
+     Primary Burgundy: #651A29
+     Antique Gold:   #C49A2C
+     Charcoal Brown: #2D231E
+     Warm White:     #FFFFFF / #FFFDF9
+   ================================================================ */
+
+:root {
+  --atlas-ivory:    #FAF3E4;
+  --atlas-burgundy: #651A29;
+  --atlas-gold:     #C49A2C;
+  --atlas-text:     #2D231E;
+  --atlas-card-bg:  #FFFFFF;
+  --atlas-border:   #E5D8BE;
+}
+
+/* ── Hero Container ─────────────────────────────────────────── */
+.atlas-hero {
+  position: relative;
+  background-color: var(--atlas-ivory);
+  overflow: hidden;
+  border-bottom: 1px solid var(--atlas-border);
+  padding: clamp(48px, 6vw, 76px) 0 clamp(44px, 5vw, 64px);
+}
+
+.atlas-grid-lines {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(196,154,44,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(196,154,44,0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.atlas-hero-container {
+  position: relative;
+  z-index: 2;
+  max-width: min(1660px, 94vw);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 3vw, 40px);
+}
+
+.atlas-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: clamp(32px, 4.5vw, 68px);
+  align-items: center;
+}
+
+/* ── Left Column: Editorial Typography ──────────────────────── */
+.atlas-hero-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.atlas-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--label, 'Marcellus', serif);
+  font-size: 11.5px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--atlas-burgundy);
+  margin-bottom: 18px;
+}
+
+.atlas-eyebrow-rule {
+  width: 32px;
+  height: 1px;
+  background: var(--atlas-gold);
+  opacity: 0.6;
+}
+
+.atlas-hero-heading {
+  font-family: var(--disp, 'Cormorant Garamond', Georgia, serif);
+  font-weight: 700;
+  font-size: clamp(42px, 5.2vw, 72px);
+  color: var(--atlas-burgundy);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px 0;
+}
+
+.atlas-hero-tracks-highlight {
+  font-style: italic;
+  color: var(--atlas-gold);
+  font-weight: 600;
+}
+
+.atlas-hero-intro {
+  font-family: var(--body, 'Crimson Pro', Georgia, serif);
+  font-size: clamp(16.5px, 1.4vw, 19px);
+  color: var(--atlas-text);
+  line-height: 1.72;
+  margin: 0 0 24px 0;
+  max-width: 620px;
+}
+
+.atlas-hero-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  max-width: 320px;
+}
+
+.atlas-divider-line {
+  flex: 1;
+  height: 1px;
+  background: var(--atlas-gold);
+  opacity: 0.55;
+}
+
+.atlas-divider-ornament {
+  font-size: 11px;
+  color: var(--atlas-gold);
+}
+
+/* Quick Index Navigation Pills */
+.atlas-track-nav {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.atlas-track-nav-label {
+  font-family: var(--label, 'Marcellus', serif);
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--atlas-burgundy);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.atlas-track-nav-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.atlas-nav-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--atlas-gold);
+  background: #FFFDF9;
+  color: var(--atlas-burgundy);
+  font-family: var(--label, 'Marcellus', serif);
+  font-size: 11.5px;
+  letter-spacing: 1px;
+  text-decoration: none !important;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(101,26,41,0.04);
+}
+
+.atlas-nav-pill:hover {
+  background: var(--atlas-burgundy);
+  color: var(--atlas-ivory);
+  border-color: var(--atlas-burgundy);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(101,26,41,0.14);
+}
+
+/* ── Right Column: Bridge Elevation Illustration Plate ──────── */
+.atlas-hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+.atlas-bridge-plate {
+  position: relative;
+  width: 100%;
+  max-width: 740px;
+  background: #FFFDF9;
+  border: 1.5px solid var(--atlas-border);
+  border-top: 3px solid var(--atlas-burgundy);
+  box-shadow: 0 10px 30px rgba(101,26,41,0.06);
+  border-radius: 3px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.atlas-plate-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--label, 'Marcellus', serif);
+  font-size: 10px;
+  letter-spacing: 1.8px;
+  color: var(--atlas-burgundy);
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--atlas-border);
+  margin-bottom: 12px;
+}
+
+.atlas-bridge-visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 800 / 360;
+  background-color: var(--atlas-ivory);
+  overflow: hidden;
+  border: 1px solid rgba(196,154,44,0.3);
+}
+
+.atlas-bridge-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  mix-blend-mode: multiply;
+  opacity: 0.65;
+  filter: contrast(1.05);
+}
+
+.atlas-bridge-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: block;
+}
+
+.atlas-plate-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--label, 'Marcellus', serif);
+  font-size: 9.5px;
+  letter-spacing: 1.5px;
+  color: #7A695E;
+  text-transform: uppercase;
+  padding-top: 10px;
+  border-top: 1px solid var(--atlas-border);
+  margin-top: 12px;
+}
+
+/* ── Tracks Section ─────────────────────────────────────────── */
+.atlas-tracks-section {
+  padding: clamp(56px, 7vw, 88px) 0 clamp(64px, 8vw, 96px);
+  background-color: var(--atlas-ivory);
+  position: relative;
+}
+
+.atlas-tracks-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(196,154,44,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(196,154,44,0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+  pointer-events: none;
+}
+
+.atlas-tracks-wrap {
+  max-width: min(1660px, 94vw);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 3vw, 40px);
+  position: relative;
+}
+
+/* ── 3-Column Editorial Grid ─────────────────────────────────── */
+.atlas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(24px, 2.2vw, 36px);
+}
+
+/* ── Individual Technical Track Panel ───────────────────────── */
+.atlas-panel {
+  position: relative;
+  background: var(--atlas-card-bg);
+  border: 1px solid var(--atlas-border);
+  border-top: none;
+  padding: 0 0 28px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.28s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.28s ease, border-color 0.28s ease;
+  cursor: default;
+  will-change: transform;
+  border-radius: 2px;
+  box-shadow: 0 4px 16px rgba(101,26,41,0.04);
+}
+
+.atlas-panel:hover {
+  transform: translateY(-6px);
+  border-color: rgba(196,154,44,0.6);
+  box-shadow:
+    0 12px 32px rgba(101,26,41,0.09),
+    inset 0 0 0 1px rgba(196,154,44,0.25);
+}
+
+.atlas-panel:focus-visible {
+  outline: 2.5px solid var(--atlas-gold);
+  outline-offset: 3px;
+}
+
+/* Top decorative SVG rule */
+.atlas-panel-topbar {
+  width: 100%;
+  height: 6px;
+  flex-shrink: 0;
+}
+.atlas-topbar-svg {
+  display: block;
+  width: 100%;
+  height: 6px;
+}
+
+/* Background watermark numeral */
+.atlas-panel-watermark {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-family: var(--disp, 'Cormorant Garamond', Georgia, serif);
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--track-accent, var(--atlas-burgundy));
+  opacity: 0.08;
+  letter-spacing: -0.04em;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+}
+
+/* Panel Header */
+.atlas-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 28px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.atlas-panel-num-badge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.atlas-track-label-prefix {
+  font-family: var(--label, 'Marcellus', serif);
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  color: var(--atlas-gold);
+  font-weight: 600;
+}
+
+.atlas-track-num-digit {
+  font-family: var(--disp, 'Cormorant Garamond', Georgia, serif);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--track-accent, var(--atlas-burgundy));
+  line-height: 1;
+}
+
+.atlas-panel-icon {
+  font-size: 24px;
+  line-height: 1;
+  filter: contrast(1.1);
+}
+
+/* SVG Illustration Canvas Container */
+.atlas-illo-wrap {
+  padding: 14px 28px 10px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Panel Title */
+.atlas-panel-title {
+  font-family: var(--disp, 'Cormorant Garamond', Georgia, serif);
+  font-weight: 700;
+  font-size: clamp(19px, 1.35vw, 22.5px);
+  color: var(--atlas-burgundy);
+  line-height: 1.25;
+  padding: 0 28px;
+  margin: 8px 0 16px 0;
+  border-left: 3px solid var(--track-accent, var(--atlas-burgundy));
+  position: relative;
+  z-index: 2;
+}
+
+/* Topic Bullets List */
+.atlas-topic-list {
+  list-style: none;
+  padding: 0 28px;
+  margin: 0;
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.atlas-topic-item {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  padding: 9px 0;
+  border-bottom: 1px dashed rgba(220,201,152,0.55);
+}
+
+.atlas-topic-item:last-child {
+  border-bottom: none;
+}
+
+.atlas-topic-bullet {
+  flex-shrink: 0;
+  margin-top: 3px;
+  opacity: 0.85;
+}
+
+.atlas-topic-text {
+  font-family: var(--body, 'Crimson Pro', Georgia, serif);
+  font-size: clamp(14.5px, 1.05vw, 16px);
+  color: var(--atlas-text);
+  line-height: 1.6;
+}
+
+/* Panel Footer */
+.atlas-panel-footer {
+  padding: 20px 28px 0;
+  margin-top: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.atlas-footer-rule {
+  height: 1px;
+  background: linear-gradient(90deg, var(--track-accent, var(--atlas-gold)) 0%, transparent 100%);
+  opacity: 0.28;
+  margin-bottom: 12px;
+}
+
+.atlas-arrow-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.atlas-arrow-label {
+  font-family: var(--label, 'Marcellus', serif);
+  font-size: 11px;
+  letter-spacing: 1.8px;
+  color: #7A695E;
+  text-transform: uppercase;
+}
+
+.atlas-arrow-svg {
+  width: 28px;
+  height: 14px;
+  opacity: 0.65;
+  transform: translateX(-4px);
+  transition: opacity 0.25s, transform 0.25s;
+}
+
+.atlas-panel:hover .atlas-arrow-svg {
+  opacity: 1;
+  transform: translateX(2px);
+}
+
+/* Architectural Corner Detailing */
+.atlas-corner {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s;
+  z-index: 3;
+}
+
+.atlas-panel:hover .atlas-corner {
+  opacity: 1;
+}
+
+.atlas-corner-tl {
+  top: 6px;
+  left: 0;
+  border-top: 1.5px solid var(--atlas-gold);
+  border-left: 1.5px solid var(--atlas-gold);
+}
+.atlas-corner-tr {
+  top: 6px;
+  right: 0;
+  border-top: 1.5px solid var(--atlas-gold);
+  border-right: 1.5px solid var(--atlas-gold);
+}
+.atlas-corner-bl {
+  bottom: 0;
+  left: 0;
+  border-bottom: 1.5px solid var(--atlas-gold);
+  border-left: 1.5px solid var(--atlas-gold);
+}
+.atlas-corner-br {
+  bottom: 0;
+  right: 0;
+  border-bottom: 1.5px solid var(--atlas-gold);
+  border-right: 1.5px solid var(--atlas-gold);
+}
+
+/* ── Section Footer ─────────────────────────────────────────── */
+.atlas-tracks-footer {
+  margin-top: 56px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.atlas-footer-ornament {
+  width: 320px;
+  max-width: 100%;
+}
+.atlas-footer-rule-svg {
+  display: block;
+  width: 100%;
+}
+
+.atlas-disclaimer {
+  max-width: 680px;
+  font-family: var(--body, 'Crimson Pro', Georgia, serif);
+  font-size: 16.5px;
+  color: #6A5B52;
+  font-style: italic;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.atlas-cta {
+  margin-top: 6px;
+  font-family: var(--label, 'Marcellus', serif);
+  font-size: 13px;
+  letter-spacing: 2px;
+  padding: 13px 32px;
+  text-transform: uppercase;
+}
+
+/* ── SVG Illustration Base Styles ───────────────────────────── */
+.atlas-illo-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  background-color: #FFFDF9;
+  box-shadow: inset 0 0 10px rgba(196,154,44,0.06);
+}
+
+/* SVG Linework Initial Animation States */
+.js-atlas-ready .illo-line {
+  opacity: 0;
+}
+.js-atlas-ready .illo-path {
+  opacity: 0;
+}
+
+/* ── Responsive Breakpoints ─────────────────────────────────── */
+@media (max-width: 1100px) {
+  .atlas-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .atlas-hero-right {
+    order: 2;
+  }
+  .atlas-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .atlas-grid {
+    grid-template-columns: 1fr;
+  }
+  .atlas-hero {
+    padding: 36px 0 40px;
+  }
+  .atlas-hero-heading {
+    font-size: 38px;
+  }
+  .atlas-panel-head {
+    padding: 18px 20px 0;
+  }
+  .atlas-illo-wrap {
+    padding: 12px 20px 8px;
+  }
+  .atlas-panel-title {
+    padding: 0 20px;
+    font-size: 19px;
+  }
+  .atlas-topic-list {
+    padding: 0 20px;
+  }
+  .atlas-panel-footer {
+    padding: 16px 20px 0;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .js-atlas-ready .illo-line,
+  .js-atlas-ready .illo-path,
+  .atlas-panel {
+    opacity: 1 !important;
+    transform: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+  .atlas-panel:hover {
+    transform: none !important;
+  }
+}
+</style>
+
+
+<%# ── GSAP ANIMATION CONTROLLER ──────────────────────────────────────── %>
+<script>
+(function initAtlasEngine() {
+  'use strict';
+
+  function setupAnimations() {
+    if (typeof gsap === 'undefined') return;
+
+    // Register ScrollTrigger plugin if present
+    if (typeof ScrollTrigger !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
+    }
+
+    // Check for prefers-reduced-motion
+    var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) {
+      document.documentElement.classList.remove('js-atlas-ready');
+      return;
+    }
+
+    // Mark as ready for linework reveals
+    document.documentElement.classList.add('js-atlas-ready');
+
+    // 1. Hero Left Elements Entrance
+    var heroTimeline = gsap.timeline({ defaults: { ease: 'power2.out' } });
+    heroTimeline
+      .from('.atlas-eyebrow', { opacity: 0, y: 15, duration: 0.6 })
+      .from('.atlas-hero-heading', { opacity: 0, y: 24, duration: 0.75 }, '-=0.35')
+      .from('.atlas-hero-intro', { opacity: 0, y: 18, duration: 0.65 }, '-=0.4')
+      .from('.atlas-hero-divider', { opacity: 0, scaleX: 0, transformOrigin: 'left center', duration: 0.5 }, '-=0.3')
+      .from('.atlas-nav-pill', { opacity: 0, y: 10, stagger: 0.05, duration: 0.4 }, '-=0.2')
+      .from('.atlas-bridge-plate', { opacity: 0, y: 30, duration: 0.8 }, '-=0.6');
+
+    // 2. Animate Cable-Stayed Bridge Cables (Progressive Draw)
+    var cables = document.querySelectorAll('.hero-cable');
+    if (cables.length) {
+      cables.forEach(function(c, i) {
+        var len = 150;
+        try { len = c.getTotalLength() || 150; } catch(e) { len = 150; }
+        gsap.fromTo(c,
+          { strokeDasharray: len, strokeDashoffset: len, opacity: 0 },
+          { strokeDashoffset: 0, opacity: 0.75, duration: 1.2, delay: 0.5 + (i * 0.04), ease: 'power2.inOut' }
+        );
+      });
+    }
+
+    // 3. Staggered Entrance of Technical Track Panels
+    var panels = document.querySelectorAll('.atlas-panel');
+    if (panels.length && typeof ScrollTrigger !== 'undefined') {
+      ScrollTrigger.batch(panels, {
+        onEnter: function(batch) {
+          gsap.from(batch, {
+            opacity: 0,
+            y: 45,
+            duration: 0.75,
+            stagger: 0.12,
+            ease: 'power2.out',
+            clearProps: 'opacity,y,transform'
+          });
+        },
+        start: 'top 88%',
+        once: true
+      });
+
+      // 4. Progressive SVG Linework Reveal per Panel
+      panels.forEach(function(panel) {
+        var drawLines = panel.querySelectorAll('.illo-line');
+        var fadePaths = panel.querySelectorAll('.illo-path');
+
+        ScrollTrigger.create({
+          trigger: panel,
+          start: 'top 82%',
+          once: true,
+          onEnter: function() {
+            if (drawLines.length) {
+              drawLines.forEach(function(line) {
+                var len = 180;
+                try { len = line.getTotalLength() || 180; } catch(e) { len = 180; }
+                gsap.fromTo(line,
+                  { strokeDasharray: len, strokeDashoffset: len, opacity: 1 },
+                  { strokeDashoffset: 0, duration: 1.1, ease: 'power2.inOut', delay: Math.random() * 0.2 }
+                );
+              });
+            }
+
+            if (fadePaths.length) {
+              gsap.to(fadePaths, {
+                opacity: 1,
+                duration: 0.8,
+                stagger: 0.04,
+                ease: 'power1.out'
+              });
+            }
+          }
+        });
+      });
+    }
+  }
+
+  // Defer until DOM and vendor scripts are ready
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    setTimeout(setupAnimations, 100);
+  } else {
+    window.addEventListener('DOMContentLoaded', function() {
+      setTimeout(setupAnimations, 100);
+    });
+  }
+})();
+</script>

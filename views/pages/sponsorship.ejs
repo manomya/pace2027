@@ -1,0 +1,47 @@
+<div class="page-head"><div class="wrap">
+  <div class="eyebrow-l">Partner With Us</div>
+  <h1>Sponsorship Opportunities</h1>
+</div></div>
+
+<section><div class="wrap">
+  <p class="lead">PACE-2027 offers four sponsorship tiers with graded visibility across the conference, the venue and all printed and digital materials. For details, please contact the Organizing Committee.</p>
+  
+  <div class="tbl" style="margin-top:24px"><table>
+    <thead>
+      <tr>
+        <th>Benefits</th>
+        <th>Platinum</th>
+        <th>Diamond</th>
+        <th>Gold</th>
+        <th>Silver</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% sponsors.forEach(function(row, idx) { %>
+        <tr>
+          <td class="<%= idx === 0 ? 'k' : '' %>">
+            <%- idx === 0 ? '<strong>' + row[0] + '</strong>' : row[0] %>
+          </td>
+          <% row.slice(1).forEach(function(col) { %>
+            <td class="c">
+              <% if (col === '✓') { %>
+                <span class="tick">✓</span>
+              <% } else if (col === '—') { %>
+                <span class="dash">—</span>
+              <% } else if (idx === 0) { %>
+                <strong><%= col %></strong>
+              <% } else { %>
+                <%= col %>
+              <% } %>
+            </td>
+          <% }); %>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table></div>
+
+  <p class="note">Sponsorship enquiries: <a href="mailto:PACE2027@poornima.edu.in">PACE2027@poornima.edu.in</a></p>
+
+  <h3 style="margin-top:34px">Current Partners</h3>
+  <%- include('../partials/partners') %>
+</div></section>

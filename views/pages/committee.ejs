@@ -1,0 +1,19 @@
+<div class="page-head"><div class="wrap">
+  <div class="eyebrow-l">Committees</div>
+  <h1>Organizing Committee</h1>
+</div></div>
+
+<section><div class="wrap">
+  <% committee.forEach(function(tier) { %>
+    <div class="tier-head"><%= tier.tier %></div>
+    <div class="people">
+      <% tier.members.forEach(function(p) { %>
+        <div class="person">
+          <div class="ph"><img src="<%= p.image %>" alt="<%= p.name %>"></div>
+          <b><%= p.name %></b>
+          <span><%- p.role %></span>
+        </div>
+      <% }); %>
+    </div>
+  <% }); %>
+</div></section>

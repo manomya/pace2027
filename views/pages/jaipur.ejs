@@ -1,0 +1,20 @@
+<div class="page-head"><div class="wrap">
+  <div class="eyebrow-l">Host City</div>
+  <h1>Important Sightseeing Places in Jaipur</h1>
+</div></div>
+
+<section><div class="wrap">
+  <p class="lead">Jaipur, the capital of Rajasthan and a UNESCO World Heritage city, is renowned for its planned urbanism, monumental architecture and living craft traditions — a fitting setting for a civil engineering congregation.</p>
+  
+  <div class="sights">
+    <% sights.forEach(function(s) { %>
+      <div class="sight">
+        <div class="arch"><img src="<%= s.image %>" alt="<%= s.name %>, Jaipur"></div>
+        <div class="cap">
+          <b><%= s.name %></b>
+          <span><%= s.desc %></span>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+</div></section>

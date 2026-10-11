@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= typeof title !== 'undefined' ? title + ' | PACE–2027 | Poornima University, Jaipur' : 'PACE–2027 | International Conference on Pioneering Advancements in Civil Engineering | Poornima University, Jaipur' %></title>
+  <meta name="description" content="International Conference on Pioneering Advancements in Civil Engineering (PACE-2027), 29–30 January 2027, Department of Civil Engineering, Poornima University, Jaipur, Rajasthan, India.">
+  <link rel="icon" type="image/png" href="/images/poornima-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Marcellus&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=2027.7">
+  <!-- Tailwind CSS CDN (with preflight: false to preserve bespoke site stylesheet) -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: {
+        preflight: false
+      },
+      theme: {
+        extend: {
+          colors: {
+            parchment: '#f6efe5',
+            'burgundy-main': '#4b1720',
+            'gold-main': '#c88a24',
+            'gold-hover': '#b3791b',
+            'ink-dark': '#3d231e',
+            'divider-sep': '#cdbaa8'
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            body: ['"EB Garamond"', 'serif'],
+            sans: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <%- include('partials/topbar') %>
+  <%- include('partials/masthead') %>
+  <%- include('partials/nav') %>
+
+  <main id="app">
+    <%- body %>
+  </main>
+
+  <%- include('partials/footer') %>
+
+  <!-- GSAP Core & ScrollTrigger for Scroll-Driven Architectural Effects -->
+  <script src="/js/vendor/gsap.min.js?v=2027.3"></script>
+  <script src="/js/vendor/ScrollTrigger.min.js?v=2027.3"></script>
+  <script src="/js/main.js?v=2027.3"></script>
+  <script src="/js/brick-wall-reveal.js?v=2027.8"></script>
+
+  <!-- Agentation Visual Feedback for AI Development -->
+  <script src="/js/agentation.bundle.js?v=2027.3" defer></script>
+</body>
+</html>

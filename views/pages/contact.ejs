@@ -1,0 +1,73 @@
+<div class="page-head"><div class="wrap">
+  <div class="eyebrow-l">Get in Touch</div>
+  <h1>Contact Us</h1>
+</div></div>
+
+<section><div class="wrap">
+  <div class="cards">
+    <% contact.convenors.forEach(function(c) { %>
+      <div class="card">
+        <div class="ic"><%= c.role %></div>
+        <b><%= c.name %></b>
+        <p style="font-size:16px;color:var(--muted);white-space:pre-line"><%= c.dept %></p>
+        <p class="m"><a href="tel:<%= c.phone.replace(/[^0-9+]/g, '') %>"><%= c.phone %></a></p>
+      </div>
+    <% }); %>
+
+    <div class="card">
+      <div class="ic">Secretariat</div>
+      <b>PACE-2027</b>
+      <p style="font-size:16px;color:var(--muted)"><%= contact.secretariat.address %></p>
+      <p class="m">
+        <a href="mailto:<%= contact.secretariat.email %>"><%= contact.secretariat.email %></a><br>
+        <a href="<%= contact.secretariat.website %>" target="_blank" rel="noopener">poornima.edu.in/sub/PACE</a>
+      </p>
+    </div>
+  </div>
+
+  <h3 style="margin-top:36px">Conference Venue</h3>
+  <p class="lead"><%= contact.venue.institution %>, <%= contact.venue.address %></p>
+
+  <div style="margin-top:48px;padding:32px;background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold)">
+    <div class="eyebrow">Send an Inquiry</div>
+    <h2>Online Contact Form</h2>
+    <p class="lead">Have a query regarding paper submissions, registrations, or sponsorships? Reach out to us below and our secretariat will respond promptly.</p>
+    
+    <div id="form-response" class="form-alert"></div>
+
+    <form id="contact-form">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="c-name">Full Name *</label>
+          <input type="text" id="c-name" name="name" required placeholder="Your Name">
+        </div>
+        <div class="form-group">
+          <label for="c-email">Email Address *</label>
+          <input type="email" id="c-email" name="email" required placeholder="you@example.com">
+        </div>
+        <div class="form-group">
+          <label for="c-phone">Phone / WhatsApp</label>
+          <input type="tel" id="c-phone" name="phone" placeholder="+91 9876543210">
+        </div>
+        <div class="form-group">
+          <label for="c-subject">Subject *</label>
+          <select id="c-subject" name="subject" required>
+            <option value="General Query">General Query</option>
+            <option value="Paper Submission">Paper Submission / Track Query</option>
+            <option value="Registration & Fee">Registration &amp; Fee Payment</option>
+            <option value="Sponsorship">Sponsorship Opportunity</option>
+            <option value="Accommodation">Accommodation &amp; Venue</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label for="c-message">Message *</label>
+          <textarea id="c-message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+        </div>
+        <div class="form-group full">
+          <button type="submit" class="btn btn-gold" style="cursor:pointer;border:none">Send Message</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div></section>

@@ -1,0 +1,44 @@
+<div class="page-head"><div class="wrap">
+  <div class="eyebrow-l">Participation</div>
+  <h1>Registration</h1>
+</div></div>
+
+<section><div class="wrap">
+  <div class="eyebrow">Important Dates</div>
+  <h2>Deadlines</h2>
+  <%- include('../partials/dates') %>
+</div></section>
+
+<section class="cream"><div class="wrap">
+  <div class="eyebrow">Fees</div>
+  <h2>Conference Registration Fee</h2>
+  <div class="tbl"><table>
+    <thead><tr><th></th><th>Category</th><th>Up to 20.12.2026 (Regular)</th><th>After 20.12.2026 (Late)</th></tr></thead>
+    <tbody>
+      <tr><td rowspan="3" class="k">Indian<br>(INR)</td><td>UG / PG Students</td><td class="k">₹1,500</td><td class="k">₹2,000</td></tr>
+      <tr><td>Research Scholars / Academicians</td><td class="k">₹2,000</td><td class="k">₹2,500</td></tr>
+      <tr><td>Industry Delegates</td><td class="k">₹2,500</td><td class="k">₹3,000</td></tr>
+      <tr><td rowspan="3" class="k">Foreign<br>(USD)</td><td>UG / PG Students</td><td class="k">$ 100</td><td class="k">$ 150</td></tr>
+      <tr><td>Research Scholars / Academicians</td><td class="k">$ 150</td><td class="k">$ 200</td></tr>
+      <tr><td>Industry Delegates</td><td class="k">$ 200</td><td class="k">$ 250</td></tr>
+    </tbody>
+  </table></div>
+  <ul class="bul" style="margin-top:16px">
+    <li>Registration includes access to all technical sessions, conference kit, working lunch, and certificate of participation.</li>
+    <li>Paid accommodation facilities for conference participants will be available at the university and nearby hotels / guest houses.</li>
+  </ul>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Remittance</div>
+  <h2>Payment Details</h2>
+  <div class="tbl" style="max-width:820px"><table><tbody>
+    <tr><td class="k" style="width:210px">Account No.</td><td><%= bank.accountNo %></td></tr>
+    <tr><td class="k">Branch</td><td><%= bank.branch %></td></tr>
+    <tr><td class="k">IFSC Code</td><td><%= bank.ifsc %></td></tr>
+    <tr><td class="k">SWIFT Code</td><td><%= bank.swift %></td></tr>
+    <tr><td class="k">Type of Account</td><td><%= bank.accountType %></td></tr>
+    <tr><td class="k">Bank Code</td><td><%= bank.bankCode %></td></tr>
+  </tbody></table></div>
+  <p class="note">After remitting the fee, please share the transaction reference with the conference secretariat at <a href="mailto:PACE2027@poornima.edu.in">PACE2027@poornima.edu.in</a>.</p>
+</div></section>

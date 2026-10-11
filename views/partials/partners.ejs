@@ -1,0 +1,26 @@
+<div class="pgrid">
+  <div>
+    <h4>Industry Partners</h4>
+    <div class="logos">
+      <% partners.industry.forEach(function(p) { %>
+        <div class="logo"><img src="<%= p.image %>" alt="<%= p.name %>"></div>
+      <% }); %>
+    </div>
+  </div>
+  <div>
+    <h4>Excellence Partner</h4>
+    <div class="logos">
+      <% partners.excellence.forEach(function(p) { %>
+        <div class="logo"><img src="<%= p.image %>" alt="<%= p.name %>"></div>
+      <% }); %>
+    </div>
+  </div>
+  <div>
+    <h4>Technical Partners</h4>
+    <div class="logos">
+      <% partners.technical.forEach(function(p) { %>
+        <div class="logo"><img src="<%= p.image %>" alt="<%= p.name %>"></div>
+      <% }); %>
+    </div>
+  </div>
+</div>

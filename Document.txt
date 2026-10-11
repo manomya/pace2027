@@ -1,0 +1,614 @@
+1. Public Conference Website
+
+Main navigation:
+
+Home
+About PACE
+Conference Themes
+Call for Papers
+Important Dates
+Registration
+Committees
+Publication
+Sponsorship
+Venue
+Jaipur
+Contact
+
+The homepage should prominently show:
+
+PACE-2027
+Pioneering Advancements in Civil Engineering
+29–30 January 2027
+Poornima University, Jaipur
+Countdown
+Register Now
+Submit Paper
+Important deadlines
+Conference themes
+Key committee members
+Publication information
+
+The brochure says the conference is intended to bring together scientists, technocrats, scholars and young researchers, with emphasis on sustainability, resilience and data-driven solutions.
+
+2. Real Registration System
+
+This is probably the most important part of your project.
+
+Instead of simply displaying:
+
+UG/PG Student — ₹1,500
+
+the user should actually be able to register.
+
+The brochure currently defines:
+
+Participant	Regular	Late
+Indian UG/PG Student	₹1,500	₹2,000
+Indian Research Scholar/Academician	₹2,000	₹2,500
+Indian Industry Delegate	₹2,500	₹3,000
+Foreign UG/PG Student	$100	$150
+Foreign Research Scholar/Academician	$150	$200
+Foreign Industry Delegate	$200	$250
+
+These are directly from the supplied brochure.
+
+Registration form
+
+I would make it a multi-step form:
+
+Step 1 — Participant
+
+Country
+Participant Category
+Title
+Full Name
+Email
+Mobile
+Gender
+Institution/Organization
+Designation
+Department
+City
+State
+Country
+
+Step 2 — Paper Information
+
+Are you submitting a paper?
+    Yes / No
+
+
+Paper ID
+Paper Title
+Track
+Author Type
+Number of Authors
+
+Step 3 — Accommodation
+
+Require accommodation?
+    Yes / No
+
+
+Arrival Date
+Departure Date
+Number of Nights
+
+The brochure specifically says paid accommodation will be available at the university and nearby hotels/guest houses.
+
+Step 4 — Payment
+
+The system calculates automatically:
+
+Participant Type
+        ↓
+Country
+        ↓
+Registration Category
+        ↓
+Current Date
+        ↓
+Regular / Late Fee
+        ↓
+Final Amount
+
+For example:
+
+Indian
+Research Scholar
+       ↓
+₹2,000
+
+Before/after the applicable deadline, the amount changes automatically.
+
+3. Payment Verification
+
+This is where I would improve the current website significantly.
+
+The brochure currently provides bank/remittance information and asks participants to share the transaction reference with the conference secretariat.
+
+Instead of forcing users to email manually, your website can have:
+
+Registration ID: PACE27-001245
+
+
+Amount: ₹2,000
+
+
+Payment Method:
+○ Bank Transfer
+○ UPI
+○ Online Payment
+
+
+Transaction ID / UTR:
+[________________]
+
+
+Payment Screenshot:
+[ Upload ]
+
+
+[Submit Registration]
+
+Then the participant receives:
+
+Registration Submitted Successfully
+
+Registration ID: PACE27-001245
+
+Payment Status: Pending Verification
+
+4. Paper Submission System
+
+This should be a completely separate workflow.
+
+The brochure specifies:
+
+Papers must follow the author-guideline format.
+Maximum manuscript length is 10 pages.
+Similarity should not exceed 10%.
+Manuscripts should use the template shared by email.
+Accepted and presented papers are proposed for ISBN conference proceedings.
+Selected papers may be recommended for Scopus/Web of Science indexed journals, subject to the respective journal's review/publication policies.
+Paper submission form
+Paper Submission
+
+
+Author Email
+Paper Title
+Track
+Corresponding Author
+
+
+Authors
+ ├── Author 1
+ ├── Author 2
+ ├── Author 3
+ └── Add Author +
+
+
+Institution
+
+
+Abstract
+Keywords
+
+
+Paper File
+[ Upload PDF ]
+
+
+Similarity Report
+[ Upload PDF ]
+
+
+[ Submit Paper ]
+
+After submission:
+
+Paper ID
+PACE27-P00482
+
+
+Status
+● Submitted
+5. Paper Status Tracking
+
+This would make the website much more professional.
+
+Participants should be able to log in and see:
+
+My Submissions
+
+
+PACE27-P00482
+
+
+Title:
+AI-Based Flood Prediction for Urban Infrastructure
+
+
+Status:
+Submitted
+
+
+Timeline
+
+
+✓ Paper Submitted
+✓ Under Review
+○ Acceptance Decision
+○ Registration
+○ Camera Ready
+○ Presentation
+
+The official deadlines currently listed are:
+
+Abstract: 15 September 2026
+Paper Submission: 15 October 2026
+Acceptance Notification: 15 November 2026
+Registration: 15 December 2026
+Camera Ready Paper: 28 December 2026
+
+That timeline should be visible throughout the system.
+
+6. Admin Dashboard
+
+This is the part I strongly recommend you add.
+
+The Civil Department should not have to manage everything through Excel/email.
+
+Create:
+
+/admin
+Dashboard
+PACE-2027 ADMIN
+
+
+┌────────────────┐
+│ 842            │
+│ Registrations  │
+└────────────────┘
+
+
+┌────────────────┐
+│ 417            │
+│ Papers         │
+└────────────────┘
+
+
+┌────────────────┐
+│ 356            │
+│ Payments       │
+└────────────────┘
+
+
+┌────────────────┐
+│ 61             │
+│ Pending Review │
+└────────────────┘
+
+Then:
+
+Registrations
+ID          Name           Category       Amount   Payment
+------------------------------------------------------------
+P27-001     Rahul Sharma   Researcher     ₹2000    Verified
+P27-002     John Smith     Foreign        $150     Pending
+P27-003     Priya Singh    Student        ₹1500    Verified
+
+Admin actions:
+
+View
+Edit
+Verify Payment
+Reject
+Download
+Email
+Export CSV
+7. Paper Review Dashboard
+
+For the technical committee:
+
+Paper ID       Title                  Track       Status
+---------------------------------------------------------
+P27-001        Smart Structures       Structural  Pending
+P27-002        Flood Prediction       Water       Review
+P27-003        Green Concrete         Environment Accepted
+
+Reviewer can open:
+
+Paper Details
+
+
+Title
+Authors
+Institution
+Abstract
+Keywords
+
+
+[Download Paper]
+
+
+Reviewer Comments
+[________________________]
+
+
+Decision:
+
+
+○ Accept
+○ Minor Revision
+○ Major Revision
+○ Reject
+
+
+[Submit Decision]
+8. Automatic Email System
+
+This will save the department a huge amount of manual work.
+
+Automatically send emails for:
+
+Registration
+Registration Received
+Payment Verified
+Payment Rejected
+Registration Confirmed
+Paper
+Paper Submitted
+Paper Under Review
+Revision Required
+Paper Accepted
+Paper Rejected
+Camera Ready Required
+Conference
+Conference Reminder
+Registration Deadline
+Camera Ready Deadline
+Conference Starting Tomorrow
+9. Unique IDs
+
+Every participant/paper should get a unique ID.
+
+For example:
+
+Registration:
+PACE27-R00001
+
+
+Paper:
+PACE27-P00001
+
+
+Payment:
+PACE27-T00001
+
+This makes administration much easier.
+
+10. Certificate System
+
+You can even add this later.
+
+After the conference:
+
+Certificate Verification
+
+
+Enter Certificate ID
+
+
+[ PACE27-C-001245 ]
+
+
+[Verify]
+
+Then:
+
+Certificate of Participation
+
+
+This is to certify that
+
+
+MANOMYA MARWAL
+
+
+has participated in
+
+
+PACE-2027
+Pioneering Advancements in Civil Engineering
+
+
+29–30 January 2027
+Poornima University, Jaipur
+
+And the admin can generate certificates in bulk.
+
+11. Database Design
+
+I would structure the backend approximately like this:
+
+users
+ ├── id
+ ├── name
+ ├── email
+ ├── password
+ └── role
+
+
+registrations
+ ├── registration_id
+ ├── user_id
+ ├── country
+ ├── category
+ ├── institution
+ ├── designation
+ ├── amount
+ ├── payment_status
+ ├── accommodation_required
+ └── created_at
+
+
+papers
+ ├── paper_id
+ ├── registration_id
+ ├── title
+ ├── abstract
+ ├── track
+ ├── status
+ ├── paper_file
+ └── submitted_at
+
+
+authors
+ ├── id
+ ├── paper_id
+ ├── name
+ ├── email
+ ├── institution
+ └── designation
+
+
+payments
+ ├── id
+ ├── registration_id
+ ├── amount
+ ├── transaction_id
+ ├── screenshot
+ ├── status
+ └── verified_by
+
+
+reviews
+ ├── id
+ ├── paper_id
+ ├── reviewer_id
+ ├── comments
+ ├── decision
+ └── reviewed_at
+
+
+certificates
+ ├── id
+ ├── registration_id
+ ├── certificate_id
+ └── file_url
+12. Recommended Technology
+
+Since you already have a frontend prototype, I would not continue building this as one giant HTML file.
+
+I recommend:
+
+Frontend
+Next.js
+React
+Tailwind CSS
+
+
+Backend
+Next.js API / Node.js
+
+
+Database
+PostgreSQL
+
+
+Authentication
+Auth.js / Supabase Auth
+
+
+File Storage
+S3 / Supabase Storage
+
+
+Email
+Resend / SMTP
+
+
+Payment
+Payment gateway + manual UTR verification
+
+
+Admin
+Next.js Admin Dashboard
+
+Architecture:
+
+                    PACE-2027
+                        │
+            ┌───────────┴───────────┐
+            │                       │
+       PUBLIC WEBSITE           PARTICIPANT
+            │                       │
+            │                  Login/Register
+            │                       │
+            ├──────────────┬────────┘
+            │              │
+       Registration     Paper Submission
+            │              │
+            └───────┬──────┘
+                    │
+                 Backend
+                    │
+          ┌─────────┼─────────┐
+          │         │         │
+       Database   Storage    Email
+          │
+       Admin Panel
+          │
+    ┌─────┼─────┬─────┐
+    │     │     │     │
+Users Papers Payments Reviews
+Most important observation about your current website
+
+Your existing design is actually a good starting point. It already has the PACE branding, homepage, countdown, conference information, themes, committees, registration fee table, payment information, venue and other sections.
+
+But currently it is essentially:
+
+Website → Information
+
+You need to turn it into:
+
+Website → Registration → Payment → Paper Submission → Review → Acceptance → Camera Ready → Conference → Certificate
+
+That's the real project.
+
+And because the first deadline in the brochure is 15 September 2026 for abstracts, the registration/submission backend should be treated as a priority rather than building dozens of extra informational pages first.
+
+I would build it in this order
+
+Phase 1 — Foundation
+
+Convert current HTML into Next.js
+Clean up design/responsive UI
+Add all brochure content
+Registration UI
+Paper submission UI
+
+Phase 2 — Backend
+6. Database
+7. Authentication
+8. Registration API
+9. Paper upload API
+10. Payment/UTR verification
+
+Phase 3 — Admin
+11. Admin dashboard
+12. Registration management
+13. Paper management
+14. Reviewer system
+15. Email notifications
+
+Phase 4 — Conference
+16. Acceptance letters
+17. Camera-ready submission
+18. Certificate generation
+19. Certificate verification
+20. Analytics/export
+
+

@@ -1,0 +1,268 @@
+<!-- BEGIN: FlipClockCountdownSection -->
+<section aria-label="Conference Countdown" class="w-full bg-[#521320] bg-gradient-to-b from-[#5c1624] via-[#4d101c] to-[#3a0b15] py-10 lg:py-14 px-4 sm:px-8 border-t border-[#6e1e30] flex flex-col items-center justify-center relative overflow-hidden select-none">
+  <div class="w-full max-w-[1380px] mx-auto flex flex-col items-center">
+    <!-- Section Heading with Flanking Lines and Diamond Accents -->
+    <div class="flex items-center justify-center w-full max-w-3xl mb-6 lg:mb-8">
+      <div class="flex-1 flex items-center justify-end">
+        <span class="w-full max-w-[140px] sm:max-w-[200px] md:max-w-[260px] h-[1px] bg-[#D8B45A]/70"></span>
+        <span class="text-[#D8B45A] text-[9px] sm:text-[11px] ml-2.5 transform rotate-45 inline-block opacity-90">◆</span>
+      </div>
+      <h2 class="font-serif text-[#D8B45A] text-lg sm:text-2xl md:text-[24px] lg:text-[26px] tracking-[0.35em] font-normal uppercase text-center px-4 sm:px-7 shrink-0">
+        Conference Begins In
+      </h2>
+      <div class="flex-1 flex items-center justify-start">
+        <span class="text-[#D8B45A] text-[9px] sm:text-[11px] mr-2.5 transform rotate-45 inline-block opacity-90">◆</span>
+        <span class="w-full max-w-[140px] sm:max-w-[200px] md:max-w-[260px] h-[1px] bg-[#D8B45A]/70"></span>
+      </div>
+    </div>
+
+    <!-- Countdown Groups Row (4 columns with fine vertical dividers) -->
+    <div class="w-full max-w-[1140px] grid grid-cols-2 lg:grid-cols-4 gap-y-6 sm:gap-y-8 lg:gap-y-0 relative">
+      <!-- Group 1: DAYS (3 Digits) -->
+      <div class="flex flex-col items-center justify-center px-2 sm:px-4 md:px-5 relative group">
+        <!-- Digit Tiles Container -->
+        <div class="flex items-center justify-center gap-2 sm:gap-2.5 mb-3 sm:mb-3.5">
+          <!-- Digit d100 -->
+          <div class="flip-tile-wrapper" data-value="0" id="tile-d100">
+            <span class="hinge-peg-left"></span>
+            <span class="hinge-peg-right"></span>
+            <div class="crease-line"></div>
+            <div class="card-half upper next-top"><span class="digit">0</span></div>
+            <div class="card-half lower current-bottom"><span class="digit">0</span></div>
+            <div class="card-half upper flip-card-top current-top z-10"><span class="digit">0</span></div>
+            <div class="card-half lower flip-card-bottom next-bottom z-20"><span class="digit">0</span></div>
+          </div>
+          <!-- Digit d10 -->
+          <div class="flip-tile-wrapper" data-value="0" id="tile-d10">
+            <span class="hinge-peg-left"></span>
+            <span class="hinge-peg-right"></span>
+            <div class="crease-line"></div>
+            <div class="card-half upper next-top"><span class="digit">0</span></div>
+            <div class="card-half lower current-bottom"><span class="digit">0</span></div>
+            <div class="card-half upper flip-card-top current-top z-10"><span class="digit">0</span></div>
+            <div class="card-half lower flip-card-bottom next-bottom z-20"><span class="digit">0</span></div>
+          </div>
+          <!-- Digit d1 -->
+          <div class="flip-tile-wrapper" data-value="0" id="tile-d1">
+            <span class="hinge-peg-left"></span>
+            <span class="hinge-peg-right"></span>
+            <div class="crease-line"></div>
+            <div class="card-half upper next-top"><span class="digit">0</span></div>
+            <div class="card-half lower current-bottom"><span class="digit">0</span></div>
+            <div class="card-half upper flip-card-top current-top z-10"><span class="digit">0</span></div>
+            <div class="card-half lower flip-card-bottom next-bottom z-20"><span class="digit">0</span></div>
+          </div>
+        </div>
+        <!-- Group Unit Label with continuous flanking line -->
+        <div class="w-full flex items-center justify-center gap-3 max-w-[270px]">
+          <div class="flex-1 h-[1px] bg-[#D8B45A]/60"></div>
+          <span class="text-[#D8B45A] font-serif tracking-[0.3em] text-xs sm:text-sm uppercase font-normal">
+            DAYS
+          </span>
+          <div class="flex-1 h-[1px] bg-[#D8B45A]/60"></div>
+        </div>
+        <!-- Vertical Divider (Desktop Only) -->
+        <div class="hidden lg:block absolute right-0 top-1 bottom-1 w-[1px] bg-[#D8B45A]/35"></div>
+      </div>
+
+      <!-- Group 2: HOURS (2 Digits) -->
+      <div class="flex flex-col items-center justify-center px-2 sm:px-4 md:px-5 relative group">
+        <div class="flex items-center justify-center gap-2 sm:gap-2.5 mb-3 sm:mb-3.5">
+          <!-- Digit h10 -->
+          <div class="flip-tile-wrapper" data-value="0" id="tile-h10">
+            <span class="hinge-peg-left"></span>
+            <span class="hinge-peg-right"></span>
+            <div class="crease-line"></div>
+            <div class="card-half upper next-top"><span class="digit">0</span></div>
+            <div class="card-half lower current-bottom"><span class="digit">0</span></div>
+            <div class="card-half upper flip-card-top current-top z-10"><span class="digit">0</span></div>
+            <div class="card-half lower flip-card-bottom next-bottom z-20"><span class="digit">0</span></div>
+          </div>
+          <!-- Digit h1 -->
+          <div class="flip-tile-wrapper" data-value="0" id="tile-h1">
+            <span class="hinge-peg-left"></span>
+            <span class="hinge-peg-right"></span>
+            <div class="crease-line"></div>
+            <div class="card-half upper next-top"><span class="digit">0</span></div>
+            <div class="card-half lower current-bottom"><span class="digit">0</span></div>
+            <div class="card-half upper flip-card-top current-top z-10"><span class="digit">0</span></div>
+            <div class="card-half lower flip-card-bottom next-bottom z-20"><span class="digit">0</span></div>
+          </div>
+        </div>
+        <!-- Group Unit Label with continuous flanking line -->
+        <div class="w-full flex items-center justify-center gap-3 max-w-[210px]">
+          <div class="flex-1 h-[1px] bg-[#D8B45A]/60"></div>
+          <span class="text-[#D8B45A] font-serif tracking-[0.3em] text-xs sm:text-sm uppercase font-normal">
+            HOURS
+          </span>
+          <div class="flex-1 h-[1px] bg-[#D8B45A]/60"></div>
+        </div>
+        <!-- Vertical Divider (Desktop Only) -->
+        <div class="hidden lg:block absolute right-0 top-1 bottom-1 w-[1px] bg-[#D8B45A]/35"></div>
+      </div>
+
+      <!-- Group 3: MINUTES (2 Digits) -->
+      <div class="flex flex-col items-center justify-center px-2 sm:px-4 md:px-5 relative group">
+        <div class="flex items-center justify-center gap-2 sm:gap-2.5 mb-3 sm:mb-3.5">
+          <!-- Digit m10 -->
+          <div class="flip-tile-wrapper" data-value="0" id="tile-m10">
+            <span class="hinge-peg-left"></span>
+            <span class="hinge-peg-right"></span>
+            <div class="crease-line"></div>
+            <div class="card-half upper next-top"><span class="digit">0</span></div>
+            <div class="card-half lower current-bottom"><span class="digit">0</span></div>
+            <div class="card-half upper flip-card-top current-top z-10"><span class="digit">0</span></div>
+            <div class="card-half lower flip-card-bottom next-bottom z-20"><span class="digit">0</span></div>
+          </div>
+          <!-- Digit m1 -->
+          <div class="flip-tile-wrapper" data-value="0" id="tile-m1">
+            <span class="hinge-peg-left"></span>
+            <span class="hinge-peg-right"></span>
+            <div class="crease-line"></div>
+            <div class="card-half upper next-top"><span class="digit">0</span></div>
+            <div class="card-half lower current-bottom"><span class="digit">0</span></div>
+            <div class="card-half upper flip-card-top current-top z-10"><span class="digit">0</span></div>
+            <div class="card-half lower flip-card-bottom next-bottom z-20"><span class="digit">0</span></div>
+          </div>
+        </div>
+        <!-- Group Unit Label with continuous flanking line -->
+        <div class="w-full flex items-center justify-center gap-3 max-w-[230px]">
+          <div class="flex-1 h-[1px] bg-[#D8B45A]/60"></div>
+          <span class="text-[#D8B45A] font-serif tracking-[0.3em] text-xs sm:text-sm uppercase font-normal">
+            MINUTES
+          </span>
+          <div class="flex-1 h-[1px] bg-[#D8B45A]/60"></div>
+        </div>
+        <!-- Vertical Divider (Desktop Only) -->
+        <div class="hidden lg:block absolute right-0 top-1 bottom-1 w-[1px] bg-[#D8B45A]/35"></div>
+      </div>
+
+      <!-- Group 4: SECONDS (2 Digits) -->
+      <div class="flex flex-col items-center justify-center px-2 sm:px-4 md:px-5 relative group">
+        <div class="flex items-center justify-center gap-2 sm:gap-2.5 mb-3 sm:mb-3.5">
+          <!-- Digit s10 -->
+          <div class="flip-tile-wrapper" data-value="0" id="tile-s10">
+            <span class="hinge-peg-left"></span>
+            <span class="hinge-peg-right"></span>
+            <div class="crease-line"></div>
+            <div class="card-half upper next-top"><span class="digit">0</span></div>
+            <div class="card-half lower current-bottom"><span class="digit">0</span></div>
+            <div class="card-half upper flip-card-top current-top z-10"><span class="digit">0</span></div>
+            <div class="card-half lower flip-card-bottom next-bottom z-20"><span class="digit">0</span></div>
+          </div>
+          <!-- Digit s1 -->
+          <div class="flip-tile-wrapper" data-value="0" id="tile-s1">
+            <span class="hinge-peg-left"></span>
+            <span class="hinge-peg-right"></span>
+            <div class="crease-line"></div>
+            <div class="card-half upper next-top"><span class="digit">0</span></div>
+            <div class="card-half lower current-bottom"><span class="digit">0</span></div>
+            <div class="card-half upper flip-card-top current-top z-10"><span class="digit">0</span></div>
+            <div class="card-half lower flip-card-bottom next-bottom z-20"><span class="digit">0</span></div>
+          </div>
+        </div>
+        <!-- Group Unit Label with continuous flanking line -->
+        <div class="w-full flex items-center justify-center gap-3 max-w-[230px]">
+          <div class="flex-1 h-[1px] bg-[#D8B45A]/60"></div>
+          <span class="text-[#D8B45A] font-serif tracking-[0.3em] text-xs sm:text-sm uppercase font-normal">
+            SECONDS
+          </span>
+          <div class="flex-1 h-[1px] bg-[#D8B45A]/60"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END: FlipClockCountdownSection -->
+
+<!-- Flip Clock JavaScript Controller -->
+<script>
+  (function () {
+    // Conference Target Date: 29 January 2027 09:00:00 IST (UTC+05:30)
+    const targetDate = new Date('2027-01-29T09:00:00+05:30').getTime();
+
+    // Mapping of individual tile IDs
+    const tileIds = ['d100', 'd10', 'd1', 'h10', 'h1', 'm10', 'm1', 's10', 's1'];
+
+    function flipTile(id, nextVal) {
+      const tile = document.getElementById('tile-' + id);
+      if (!tile) return;
+      const currentVal = tile.getAttribute('data-value') || '0';
+      if (currentVal === String(nextVal)) return;
+
+      const nextTop = tile.querySelector('.next-top .digit');
+      const currentBottom = tile.querySelector('.current-bottom .digit');
+      const currentTop = tile.querySelector('.current-top .digit');
+      const nextBottom = tile.querySelector('.next-bottom .digit');
+
+      // Set digits for animation transition
+      if (nextTop) nextTop.textContent = nextVal;
+      if (currentBottom) currentBottom.textContent = currentVal;
+      if (currentTop) currentTop.textContent = currentVal;
+      if (nextBottom) nextBottom.textContent = nextVal;
+
+      // Trigger 3D flap rotation
+      tile.classList.remove('flipping');
+      void tile.offsetWidth; // Force reflow
+      tile.classList.add('flipping');
+
+      // Update stored value
+      tile.setAttribute('data-value', String(nextVal));
+
+      setTimeout(function () {
+        if (currentBottom) currentBottom.textContent = nextVal;
+        if (currentTop) currentTop.textContent = nextVal;
+        tile.classList.remove('flipping');
+      }, 580);
+    }
+
+    function updateCountdown(isInitial) {
+      const now = Date.now();
+      let diff = Math.max(0, targetDate - now);
+
+      const totalSeconds = Math.floor(diff / 1000);
+      const days = Math.floor(totalSeconds / (3600 * 24));
+      const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+
+      const daysStr = String(Math.min(999, days)).padStart(3, '0');
+      const hoursStr = String(hours).padStart(2, '0');
+      const minutesStr = String(minutes).padStart(2, '0');
+      const secondsStr = String(seconds).padStart(2, '0');
+
+      const values = {
+        'd100': daysStr[0],
+        'd10': daysStr[1],
+        'd1': daysStr[2],
+        'h10': hoursStr[0],
+        'h1': hoursStr[1],
+        'm10': minutesStr[0],
+        'm1': minutesStr[1],
+        's10': secondsStr[0],
+        's1': secondsStr[1]
+      };
+
+      tileIds.forEach(function (id) {
+        if (isInitial) {
+          const tile = document.getElementById('tile-' + id);
+          if (tile) {
+            tile.setAttribute('data-value', values[id]);
+            const digits = tile.querySelectorAll('.digit');
+            digits.forEach(function(el) { el.textContent = values[id]; });
+          }
+        } else {
+          flipTile(id, values[id]);
+        }
+      });
+    }
+
+    // Initialize with current difference
+    updateCountdown(true);
+
+    // Refresh every second
+    setInterval(function () {
+      updateCountdown(false);
+    }, 1000);
+  })();
+</script>

@@ -1,0 +1,16 @@
+<div class="page-head"><div class="wrap">
+  <div class="eyebrow-l">Committees</div>
+  <h1>Local Organising Committee</h1>
+</div></div>
+
+<section><div class="wrap">
+  <p class="lead">Poornima University, Jaipur</p>
+  <div class="members">
+    <% local.forEach(function(m) { %>
+      <div>
+        <b><%= m.name %></b>
+        <span><%- m.role %></span>
+      </div>
+    <% }); %>
+  </div>
+</div></section>

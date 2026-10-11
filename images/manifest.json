@@ -1,0 +1,254 @@
+[
+  {
+    "key": "L_PU",
+    "file": "logo/poornima-university-logo.png",
+    "category": "Logo",
+    "desc": "Poornima University Official Logo",
+    "format": "image/png",
+    "sizeBytes": 29218,
+    "sizeKB": "28.5 KB"
+  },
+  {
+    "key": "HERO",
+    "file": "banner/hero-campus-banner.jpg",
+    "category": "Banner",
+    "desc": "Poornima University Campus Hero Banner",
+    "format": "image/jpeg",
+    "sizeBytes": 166772,
+    "sizeKB": "162.9 KB"
+  },
+  {
+    "key": "VENUE",
+    "file": "campus/academic-block-venue.jpg",
+    "category": "Campus / Venue",
+    "desc": "Academic Block, Poornima University",
+    "format": "image/jpeg",
+    "sizeBytes": 63312,
+    "sizeKB": "61.8 KB"
+  },
+  {
+    "key": "H_SHASHIKANT",
+    "file": "committee/shashikant-singhi.jpg",
+    "category": "Committee",
+    "desc": "Sh. Shashikant Singhi (Chairperson, PU)",
+    "format": "image/jpeg",
+    "sizeBytes": 6982,
+    "sizeKB": "6.8 KB"
+  },
+  {
+    "key": "H_RAHUL",
+    "file": "committee/rahul-singhi.jpg",
+    "category": "Committee",
+    "desc": "Ar. Rahul Singhi (Director, PU)",
+    "format": "image/jpeg",
+    "sizeBytes": 8302,
+    "sizeKB": "8.1 KB"
+  },
+  {
+    "key": "H_PADHY",
+    "file": "committee/suresh-chandra-padhy.jpg",
+    "category": "Committee",
+    "desc": "Dr. Suresh Chandra Padhy (President, PU)",
+    "format": "image/jpeg",
+    "sizeBytes": 4587,
+    "sizeKB": "4.5 KB"
+  },
+  {
+    "key": "H_MANOJ",
+    "file": "committee/manoj-gupta.jpg",
+    "category": "Committee",
+    "desc": "Dr. Manoj Gupta (Pro-President, FCE & FET, PU)",
+    "format": "image/jpeg",
+    "sizeBytes": 3818,
+    "sizeKB": "3.7 KB"
+  },
+  {
+    "key": "H_SUNIL",
+    "file": "committee/sunil-kr-gupta.jpg",
+    "category": "Committee",
+    "desc": "Dr. Sunil Kr. Gupta (Dean R&D, PU)",
+    "format": "image/jpeg",
+    "sizeBytes": 6615,
+    "sizeKB": "6.5 KB"
+  },
+  {
+    "key": "H_PRANNATH",
+    "file": "committee/prannath-dadhich.jpg",
+    "category": "Committee",
+    "desc": "Dr. Prannath Dadhich (HoD Civil, PU)",
+    "format": "image/jpeg",
+    "sizeBytes": 6812,
+    "sizeKB": "6.7 KB"
+  },
+  {
+    "key": "H_DEEPAK",
+    "file": "committee/deepak-kumar-prajapat.jpg",
+    "category": "Committee",
+    "desc": "Dr. Deepak Kumar Prajapat (Associate Professor, Civil, PU)",
+    "format": "image/jpeg",
+    "sizeBytes": 2908,
+    "sizeKB": "2.8 KB"
+  },
+  {
+    "key": "H_VEDA",
+    "file": "committee/vedatrayee-acharya.jpg",
+    "category": "Committee",
+    "desc": "Dr. Vedatrayee Acharya (Associate Professor, Civil, PU)",
+    "format": "image/jpeg",
+    "sizeBytes": 10705,
+    "sizeKB": "10.5 KB"
+  },
+  {
+    "key": "H_ASHISH",
+    "file": "committee/ashish-solanki.jpg",
+    "category": "Committee",
+    "desc": "Dr. Ashish Solanki (Associate Professor, Civil, PU)",
+    "format": "image/jpeg",
+    "sizeBytes": 8876,
+    "sizeKB": "8.7 KB"
+  },
+  {
+    "key": "H_ROHIT",
+    "file": "committee/rohit-vyas.jpg",
+    "category": "Committee",
+    "desc": "Dr. Rohit Vyas (Assistant Professor, Civil, PU)",
+    "format": "image/jpeg",
+    "sizeBytes": 3888,
+    "sizeKB": "3.8 KB"
+  },
+  {
+    "key": "H_AJAY",
+    "file": "committee/ajay-singh-thakur.jpg",
+    "category": "Committee",
+    "desc": "Mr. Ajay Singh Thakur (Assistant Professor, Civil, PU)",
+    "format": "image/jpeg",
+    "sizeBytes": 3589,
+    "sizeKB": "3.5 KB"
+  },
+  {
+    "key": "S_ALBERT",
+    "file": "sights/albert-hall-museum.jpg",
+    "category": "Sightseeing",
+    "desc": "Albert Hall Museum, Jaipur",
+    "format": "image/jpeg",
+    "sizeBytes": 36616,
+    "sizeKB": "35.8 KB"
+  },
+  {
+    "key": "S_CITYPALACE",
+    "file": "sights/city-palace.jpg",
+    "category": "Sightseeing",
+    "desc": "City Palace, Jaipur",
+    "format": "image/jpeg",
+    "sizeBytes": 59756,
+    "sizeKB": "58.4 KB"
+  },
+  {
+    "key": "S_HAWA",
+    "file": "sights/hawa-mahal.jpg",
+    "category": "Sightseeing",
+    "desc": "Hawa Mahal, Jaipur",
+    "format": "image/jpeg",
+    "sizeBytes": 54536,
+    "sizeKB": "53.3 KB"
+  },
+  {
+    "key": "S_JAL",
+    "file": "sights/jal-mahal.jpg",
+    "category": "Sightseeing",
+    "desc": "Jal Mahal, Jaipur",
+    "format": "image/jpeg",
+    "sizeBytes": 17276,
+    "sizeKB": "16.9 KB"
+  },
+  {
+    "key": "S_NAHARGARH",
+    "file": "sights/nahargarh-fort.jpg",
+    "category": "Sightseeing",
+    "desc": "Nahargarh Fort, Jaipur",
+    "format": "image/jpeg",
+    "sizeBytes": 37562,
+    "sizeKB": "36.7 KB"
+  },
+  {
+    "key": "S_AMBER",
+    "file": "sights/amber-palace.jpg",
+    "category": "Sightseeing",
+    "desc": "Amber Palace, Jaipur",
+    "format": "image/jpeg",
+    "sizeBytes": 38198,
+    "sizeKB": "37.3 KB"
+  },
+  {
+    "key": "S_JANTAR",
+    "file": "sights/jantar-mantar.jpg",
+    "category": "Sightseeing",
+    "desc": "Jantar Mantar, Jaipur",
+    "format": "image/jpeg",
+    "sizeBytes": 39711,
+    "sizeKB": "38.8 KB"
+  },
+  {
+    "key": "S_JAIGARH",
+    "file": "sights/jaigarh-fort.jpg",
+    "category": "Sightseeing",
+    "desc": "Jaigarh Fort, Jaipur",
+    "format": "image/jpeg",
+    "sizeBytes": 41935,
+    "sizeKB": "41.0 KB"
+  },
+  {
+    "key": "L_IND_HG",
+    "file": "partners/hg-infra-engineering.png",
+    "category": "Partner Logo",
+    "desc": "H.G. Infra Engineering Ltd",
+    "format": "image/png",
+    "sizeBytes": 57237,
+    "sizeKB": "55.9 KB"
+  },
+  {
+    "key": "L_IND_UT",
+    "file": "partners/ultratech-cement.png",
+    "category": "Partner Logo",
+    "desc": "UltraTech Cement",
+    "format": "image/png",
+    "sizeBytes": 27644,
+    "sizeKB": "27.0 KB"
+  },
+  {
+    "key": "L_COE",
+    "file": "partners/centre-of-excellence-water.png",
+    "category": "Partner Logo",
+    "desc": "Centre of Excellence in Water & Clean Air",
+    "format": "image/png",
+    "sizeBytes": 86050,
+    "sizeKB": "84.0 KB"
+  },
+  {
+    "key": "L_IGBC",
+    "file": "partners/indian-green-building-council.png",
+    "category": "Partner Logo",
+    "desc": "Indian Green Building Council (IGBC)",
+    "format": "image/png",
+    "sizeBytes": 72410,
+    "sizeKB": "70.7 KB"
+  },
+  {
+    "key": "L_ICI",
+    "file": "partners/indian-concrete-institute.png",
+    "category": "Partner Logo",
+    "desc": "Indian Concrete Institute (ICI)",
+    "format": "image/png",
+    "sizeBytes": 39934,
+    "sizeKB": "39.0 KB"
+  },
+  {
+    "key": "L_SPR",
+    "file": "partners/springer-proceedings.png",
+    "category": "Partner Logo",
+    "desc": "Springer Proceedings Partner",
+    "format": "image/png",
+    "sizeBytes": 12345,
+    "sizeKB": "12.1 KB"
+  }
+]

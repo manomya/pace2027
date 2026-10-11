@@ -1,0 +1,8 @@
+<ul class="dates">
+  <% dates.forEach(function(d) { %>
+    <li class="<%= d.highlight ? 'hi' : '' %>">
+      <span><%= d.label %></span>
+      <span><strong><%= d.date %></strong></span>
+    </li>
+  <% }); %>
+</ul>

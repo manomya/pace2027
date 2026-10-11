@@ -1,0 +1,31 @@
+<nav>
+  <div class="nav-in">
+    <button id="burger" aria-expanded="false" aria-controls="navlist">☰ MENU</button>
+    <ul id="navlist">
+      <li><a href="/" class="<%= currentPath === '/' ? 'on' : '' %>">Home</a></li>
+      <li class="has-sub"><a href="/about" class="<%= (currentPath === '/about' || currentPath === '/university') ? 'on' : '' %>">About</a>
+        <ul class="sub">
+          <li><a href="/about" class="<%= currentPath === '/about' ? 'on' : '' %>">About PACE-2027</a></li>
+          <li><a href="/university" class="<%= currentPath === '/university' ? 'on' : '' %>">About Poornima University</a></li>
+        </ul></li>
+      <li><a href="/themes" class="<%= currentPath === '/themes' ? 'on' : '' %>">Themes</a></li>
+      <li class="has-sub"><a href="/committee" class="<%= ['/committee', '/intl-advisory', '/natl-advisory', '/technical', '/local'].includes(currentPath) ? 'on' : '' %>">Committees</a>
+        <ul class="sub">
+          <li><a href="/committee" class="<%= currentPath === '/committee' ? 'on' : '' %>">Organizing Committee</a></li>
+          <li><a href="/intl-advisory" class="<%= currentPath === '/intl-advisory' ? 'on' : '' %>">International Advisory</a></li>
+          <li><a href="/natl-advisory" class="<%= currentPath === '/natl-advisory' ? 'on' : '' %>">National Advisory</a></li>
+          <li><a href="/technical" class="<%= currentPath === '/technical' ? 'on' : '' %>">Technical Committee</a></li>
+          <li><a href="/local" class="<%= currentPath === '/local' ? 'on' : '' %>">Local Organising Committee</a></li>
+        </ul></li>
+      <li><a href="/papers" class="<%= currentPath === '/papers' ? 'on' : '' %>">Call for Papers</a></li>
+      <li><a href="/sponsorship" class="<%= currentPath === '/sponsorship' ? 'on' : '' %>">Sponsorship</a></li>
+      <li class="has-sub"><a href="/venue" class="<%= (currentPath === '/venue' || currentPath === '/jaipur') ? 'on' : '' %>">Venue</a>
+        <ul class="sub">
+          <li><a href="/venue" class="<%= currentPath === '/venue' ? 'on' : '' %>">Venue &amp; How to Reach</a></li>
+          <li><a href="/jaipur" class="<%= currentPath === '/jaipur' ? 'on' : '' %>">Explore Jaipur</a></li>
+        </ul></li>
+      <li><a href="/contact" class="<%= currentPath === '/contact' ? 'on' : '' %>">Contact</a></li>
+      <li class="reg-btn"><a href="/registration" class="<%= currentPath === '/registration' ? 'on' : '' %>">Registration</a></li>
+    </ul>
+  </div>
+</nav>
