@@ -230,7 +230,7 @@ footer li{margin-bottom:5px}
    ======================================================== */
 .brick-reveal-section {
   position: relative;
-  padding: 48px 0 70px;
+  padding: 30px 0 20px;
   background: var(--ivory);
   overflow: hidden;
   width: 100%;
@@ -238,18 +238,22 @@ footer li{margin-bottom:5px}
 
 #partners-section {
   width: 100%;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 #partners-section > .wrap,
 #partners-section .wrap {
   width: 100%;
   max-width: 100%;
-  padding-left: clamp(20px, 4vw, 60px);
-  padding-right: clamp(20px, 4vw, 60px);
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
 #partners-section .brick-stage-wrapper {
+  width: 100%;
   max-width: 100%;
 }
 
@@ -741,5 +745,321 @@ footer li{margin-bottom:5px}
   }
   .hinge-peg-right {
     right: -3px;
+  }
+}
+
+/* ==========================================================================
+   PACE-2027 | SIX TECHNICAL TRACKS (3x2 ARCHITECTURAL GRID)
+   ========================================================================== */
+.tracks-section {
+  position: relative;
+  padding: 100px clamp(24px, 4.5vw, 80px) 140px;
+  background: var(--ivory, #FBF4E4);
+  overflow: hidden;
+}
+
+/* Subtle architectural drafting background grid */
+.tracks-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(201, 162, 39, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(201, 162, 39, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+
+.tracks-container {
+  max-width: 1540px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Section Header */
+.tracks-header {
+  text-align: center;
+  max-width: 880px;
+  margin: 0 auto 64px;
+}
+
+.tracks-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #A47F14;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.tracks-eyebrow .diamond {
+  color: #C9A227;
+  font-size: 10px;
+}
+
+.tracks-heading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(38px, 4.4vw, 56px);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #5E0F1E;
+  margin-bottom: 18px;
+  text-shadow: 0 2px 8px rgba(94, 15, 30, 0.08);
+}
+
+.tracks-heading-highlight {
+  color: #C88A24;
+  font-style: italic;
+  font-weight: 600;
+  margin-left: 6px;
+}
+
+.tracks-intro {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 18.5px;
+  color: #6B5B52;
+  line-height: 1.65;
+  margin: 0 auto;
+}
+
+/* 3-Column x 2-Row CSS Grid on Desktop with generous margins & gaps */
+.tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+}
+
+/* Track Card: The Image is the complete card background plate */
+.track-card {
+  position: relative;
+  aspect-ratio: 1.5;
+  background: transparent;
+  filter: drop-shadow(0 8px 20px rgba(75, 23, 32, 0.14));
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+              filter 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: flex;
+}
+
+.track-card:hover {
+  transform: translateY(-6px);
+  filter: drop-shadow(0 18px 36px rgba(75, 23, 32, 0.24));
+}
+
+/* Full Card Background Image */
+.track-card-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Left-aligned Content Layer over Drafting Canvas - Inset with comfortable margins */
+.track-card-content {
+  position: absolute;
+  top: 11%;
+  left: 9.5%;
+  bottom: 10.5%;
+  width: 38%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.track-card-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.track-label {
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(9px, 0.7vw, 10.5px);
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  color: #A47F14;
+  text-transform: uppercase;
+}
+
+.track-sep {
+  color: #A47F14;
+  font-size: 11px;
+  opacity: 0.6;
+}
+
+.track-num-pill {
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(8.5px, 0.65vw, 10px);
+  font-weight: 700;
+  color: #5E0F1E;
+  background: rgba(201, 162, 39, 0.18);
+  border: 1px solid rgba(201, 162, 39, 0.45);
+  padding: 1.5px 7px;
+  border-radius: 10px;
+  letter-spacing: 1px;
+}
+
+.track-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(15px, 1.15vw, 18.5px);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #5E0F1E;
+  margin: 3px 0 5px;
+  text-shadow: 0 1px 2px #fff, 0 0 10px rgba(251, 244, 228, 0.95);
+  word-wrap: break-word;
+}
+
+.track-divider {
+  height: 1.5px;
+  background: linear-gradient(90deg, #C9A227 0%, rgba(201, 162, 39, 0.4) 80%, transparent 100%);
+  margin-bottom: clamp(6px, 0.6vw, 9px);
+}
+
+.track-topics {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.track-topics li {
+  font-size: clamp(10px, 0.72vw, 12px);
+  line-height: 1.32;
+  color: #24140D;
+  padding-left: 14px;
+  position: relative;
+  margin-bottom: clamp(2px, 0.28vw, 4.5px);
+  font-weight: 500;
+  text-shadow: 0 1px 2px #fff, 0 0 8px rgba(251, 244, 228, 0.9);
+}
+
+.track-topics li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: #C9A227;
+  font-size: clamp(6px, 0.45vw, 7.5px);
+}
+
+/* Button with Refined Margins & Padding */
+.track-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(8.5px, 0.65vw, 10px);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #5E0F1E;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: clamp(5px, 0.45vw, 7px) clamp(11px, 0.8vw, 14px);
+  border: 1px solid #C9A227;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(4px);
+  align-self: flex-start;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(94, 15, 30, 0.08);
+}
+
+.track-btn .arrow-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(14px, 1vw, 16px);
+  height: clamp(14px, 1vw, 16px);
+  border-radius: 50%;
+  background: #5E0F1E;
+  color: #FAF4E8;
+  font-size: clamp(8px, 0.65vw, 10px);
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.track-btn:hover {
+  background: #5E0F1E;
+  color: #FFFFFF;
+  border-color: #5E0F1E;
+  box-shadow: 0 4px 12px rgba(94, 15, 30, 0.18);
+}
+
+.track-btn:hover .arrow-circle {
+  background: #C9A227;
+  color: #5E0F1E;
+  transform: translateX(2px);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1200px) {
+  .tracks-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+  .track-card-content {
+    top: 10%;
+    left: 9%;
+    bottom: 10%;
+    width: 41%;
+  }
+  .track-title {
+    font-size: 18.5px;
+  }
+  .track-topics li {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tracks-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .track-card {
+    aspect-ratio: auto;
+    background: #FAF4E8;
+    border: 1px solid rgba(201, 162, 39, 0.55);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    filter: drop-shadow(0 4px 12px rgba(75, 23, 32, 0.08));
+  }
+  .track-card-bg {
+    position: relative;
+    height: 220px;
+    width: 100%;
+    object-fit: contain;
+    background: #FAF4E8;
+  }
+  .track-card-content {
+    position: relative;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    width: 100%;
+    height: auto;
+    padding: 28px 24px 30px;
+  }
+  .track-title {
+    font-size: 20px;
+    margin: 6px 0 10px;
+  }
+  .track-topics li {
+    font-size: 13.5px;
+    margin-bottom: 7px;
+  }
+  .track-btn {
+    font-size: 10.5px;
+    padding: 8px 18px;
   }
 }

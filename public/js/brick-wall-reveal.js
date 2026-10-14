@@ -24,13 +24,25 @@
   let dustParticles = [];
   let isDustRunning = false;
   let lastWidthCategory = null;
+  let isInitialized = false;
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initBrickWallReveal);
+    document.addEventListener('DOMContentLoaded', () => {
+      if (!isInitialized) {
+        isInitialized = true;
+        initBrickWallReveal();
+      }
+    });
   } else {
+    isInitialized = true;
     initBrickWallReveal();
   }
-  window.addEventListener('load', initBrickWallReveal);
+  window.addEventListener('load', () => {
+    // Refresh ScrollTrigger once images finish loading
+    if (typeof ScrollTrigger !== 'undefined') {
+      ScrollTrigger.refresh();
+    }
+  });
   window.initBrickWallReveal = initBrickWallReveal;
 
   function initBrickWallReveal() {
@@ -126,6 +138,7 @@
     }
     ScrollTrigger.getAll().forEach(st => {
       if (st.trigger === stageWrapper || st.vars.trigger === stageWrapper) {
+        st.revert();
         st.kill();
       }
     });
@@ -135,7 +148,7 @@
     gsap.set(matrix, { clearProps: 'all' });
 
     // Sync matrix height exactly with backdrop
-    const backdropH = Math.max(520, backdrop.offsetHeight);
+    const backdropH = Math.max(500, backdrop.offsetHeight);
     matrix.style.height = backdropH + 'px';
     matrix.style.display = 'flex';
     matrix.style.opacity = '1';
@@ -149,10 +162,11 @@
       cols = 7;
     } else if (category === 'tablet') {
       rows = 11;
-      cols = 10;
+      cols = 11;
     } else {
       rows = 11;
-      cols = 13;
+      // Scale columns for wide/full-width viewports
+      cols = window.innerWidth >= 1400 ? 17 : 14;
     }
 
     const rowHeight = Math.max(38, Math.floor(backdropH / rows));
@@ -237,16 +251,16 @@
       opacity: 0.92
     });
 
-    const stageWidth = stage.offsetWidth || 1160;
+    const stageWidth = stage.offsetWidth || window.innerWidth;
 
-    // Create Master Scrubbed Timeline
+    // Create Master Scrubbed Timeline (calibrated scroll length)
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: stageWrapper,
         pin: true,
         start: 'top top+=75',
-        end: '+=1400', // generous scroll travel distance
-        scrub: 0.75,   // silky smooth bidirectional scrub
+        end: '+=750', // Calibrated pin scroll distance (eliminates huge blank space)
+        scrub: 0.65,
         anticipatePin: 1,
         onUpdate: (self) => {
           const p = self.progress;

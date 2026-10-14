@@ -1,0 +1,69 @@
+<%# ======================================================================
+    PACE-2027 | SIX TECHNICAL TRACKS SECTION (3x2 RESPONSIVE GRID)
+    Architectural Civil Engineering Technical Tracks presentation
+    with editorial serif typography, gold accents, chamfered cards,
+    and high-fidelity technical illustrations serving as card backgrounds.
+    ====================================================================== %>
+
+<section class="tracks-section" id="tracks-section" aria-label="Six Technical Tracks">
+  <div class="tracks-container">
+    
+    <!-- Section Header -->
+    <header class="tracks-header">
+      <div class="tracks-eyebrow" role="doc-subtitle">
+        <span class="diamond" aria-hidden="true">◇</span> — TECHNICAL TRACKS —
+      </div>
+      <h2 class="tracks-heading">
+        Six Technical <span class="tracks-heading-highlight">Tracks</span>
+      </h2>
+      <p class="tracks-intro">
+        The conference welcomes high-quality original research across civil engineering and allied disciplines. The listed tracks are indicative and not exhaustive; innovative and interdisciplinary research is also encouraged.
+      </p>
+    </header>
+
+    <!-- 3x2 Responsive CSS Grid -->
+    <div class="tracks-grid" role="list">
+      <% themes.forEach(function(t, idx) { 
+           const trackNum = String(idx + 1).padStart(2, '0');
+           const trackImg = '/images/track' + (idx + 1) + '.png';
+      %>
+        <article class="track-card" role="listitem">
+          <!-- Track Image as Background Plate -->
+          <img 
+            src="<%= trackImg %>" 
+            alt="Track <%= trackNum %>: <%= t.title %>" 
+            class="track-card-bg"
+            loading="lazy"
+            width="1536"
+            height="1024"
+          >
+          
+          <!-- Content Overlaid on Left Drafting Area -->
+          <div class="track-card-content">
+            <div class="track-card-body">
+              <div class="track-card-head">
+                <span class="track-label"><%= t.track %></span>
+                <span class="track-sep" aria-hidden="true">—</span>
+                <span class="track-num-pill"><%= trackNum %></span>
+              </div>
+              <h3 class="track-title"><%= t.title %></h3>
+              <div class="track-divider" aria-hidden="true"></div>
+              <ul class="track-topics">
+                <% t.topics.forEach(function(s) { %>
+                  <li><%= s %></li>
+                <% }); %>
+              </ul>
+            </div>
+
+            <!-- View Details Action Button -->
+            <a class="track-btn" href="/themes#track-panel-<%= idx + 1 %>" title="Explore <%= t.title %>">
+              <span>VIEW DETAILS</span>
+              <span class="arrow-circle" aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </article>
+      <% }); %>
+    </div>
+
+  </div>
+</section>

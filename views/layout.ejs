@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Marcellus&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=2027.7">
+  <link rel="stylesheet" href="/css/style.css?v=2027.21">
   <!-- Tailwind CSS CDN (with preflight: false to preserve bespoke site stylesheet) -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script>
@@ -36,8 +36,24 @@
       }
     }
   </script>
+
+  <!-- Architectural Vector Gravel Preloader: 100% procedural stone polygons, zero images -->
+  <style>
+    #pace-gravel-preloader {
+      position: fixed;
+      inset: 0;
+      z-index: 999999;
+      overflow: hidden;
+      background-color: #141619;
+      pointer-events: all;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Instant Vector Gravel Preloader -->
+  <div id="pace-gravel-preloader" aria-hidden="true"></div>
+  <script src="/js/preloader.js?v=2027.60"></script>
 
   <%- include('partials/topbar') %>
   <%- include('partials/masthead') %>
@@ -53,7 +69,7 @@
   <script src="/js/vendor/gsap.min.js?v=2027.3"></script>
   <script src="/js/vendor/ScrollTrigger.min.js?v=2027.3"></script>
   <script src="/js/main.js?v=2027.3"></script>
-  <script src="/js/brick-wall-reveal.js?v=2027.8"></script>
+  <script src="/js/brick-wall-reveal.js?v=2027.20"></script>
 
   <!-- Agentation Visual Feedback for AI Development -->
   <script src="/js/agentation.bundle.js?v=2027.3" defer></script>

@@ -40,17 +40,7 @@
           <span class="atlas-divider-line"></span>
         </div>
 
-        <!-- Six Small Numbered Indicators with Refined Borders (No bulky progress bar) -->
-        <div class="atlas-track-nav" aria-label="Jump to technical track">
-          <span class="atlas-track-nav-label">JUMP TO TRACK</span>
-          <nav class="atlas-track-nav-pills">
-            <% themes.forEach(function(t, i) { %>
-              <a href="#track-panel-<%= i+1 %>" class="atlas-nav-pill" title="Jump to Track <%= i+1 %>: <%= t.title %>">
-                <span><%= String(i+1).padStart(2,'0') %></span>
-              </a>
-            <% }); %>
-          </nav>
-        </div>
+
       </div>
 
       <!-- RIGHT COLUMN: Civil Engineering Bridge Elevation Illustration Plate -->
